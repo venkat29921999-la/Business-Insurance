@@ -625,6 +625,13 @@ img, svg{ max-width:100%; }
   background: linear-gradient(135deg, var(--ink), #1B2636 60%, var(--emerald)); color: var(--white);
   padding:24px; display:flex; flex-direction:column; justify-content:space-between; box-shadow: var(--shadow-hard);
 }
+/* ---- payment view layout ---- */
+.dash-payment-grid{ display:grid; grid-template-columns: 340px 1fr; gap:24px; align-items:start; }
+
+@media (max-width: 760px){
+  .dash-payment-grid{ grid-template-columns: 1fr; }
+  .dash-payment-card{ max-width:none; }
+}
 .dash-payment-card::after{
   content:''; position:absolute; top:-40%; left:-20%; width:80%; height:180%;
   background: linear-gradient(120deg, transparent, rgba(255,255,255,0.18), transparent);
