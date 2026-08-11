@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard | Stackly</title>
+<meta name="description" content="Manage your Stackly policies, messages, claims, payments and documents — all in one place.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth-dashboard.css">
+</head>
+<body>
+
+<div class="dash-shell" data-role="user">
+
+  <div class="dash-overlay" id="dashOverlay"></div>
+
+  <!-- ============ SIDEBAR — 7 nav links ============ -->
+  <aside class="dash-sidebar" id="dashSidebar">
+    <a href="index.html" class="brand-logo">
+    <img src="Assest/stackly-emerald-white.webp" alt="STACKLY" class="brand-logo-img">
+</a>
+
+    <nav class="dash-nav">
+      <span class="dash-nav-label">Overview</span>
+      <a href="#" class="dash-nav-link is-active" data-view="overview"><i class="fa-solid fa-gauge-high"></i> <span class="dash-nav-label-text">Dashboard</span></a>
+      <a href="#" class="dash-nav-link" data-view="messages"><i class="fa-solid fa-envelope"></i> <span class="dash-nav-label-text">Messages</span> <span class="badge-count" data-mail-unread-count>0</span></a>
+
+      <span class="dash-nav-label">Coverage</span>
+      <a href="#" class="dash-nav-link" data-view="policies"><i class="fa-solid fa-file-shield"></i> <span class="dash-nav-label-text">My Policies</span></a>
+      <a href="#" class="dash-nav-link" data-view="claims"><i class="fa-solid fa-triangle-exclamation"></i> <span class="dash-nav-label-text">Claims</span></a>
+
+      <span class="dash-nav-label">Billing</span>
+      <a href="#" class="dash-nav-link" data-view="payments"><i class="fa-solid fa-credit-card"></i> <span class="dash-nav-label-text">Payments</span></a>
+      <a href="#" class="dash-nav-link" data-view="documents"><i class="fa-solid fa-file-invoice"></i> <span class="dash-nav-label-text">Documents</span></a>
+
+      <span class="dash-nav-label">Account</span>
+      <a href="#" class="dash-nav-link" data-view="settings"><i class="fa-solid fa-gear"></i> <span class="dash-nav-label-text">Settings</span></a>
+    </nav>
+
+    <div class="dash-sidebar-foot">
+      <button class="dash-logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</button>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div class="dash-main">
+
+    <header class="dash-topbar">
+      <button class="dash-hamburger" id="dashHamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+
+      <div class="dash-topbar-title">
+        <span data-topbar-title>Dashboard</span>
+        <span class="dash-topbar-sub">Welcome back, <span data-user-name>Client</span></span>
+      </div>
+
+      <div class="dash-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search policies, documents…">
+      </div>
+
+      <div class="dash-topbar-right">
+<button class="dash-bell" aria-label="Notifications" onclick="window.location.href='404.html'">
+    <i class="fa-regular fa-bell"></i>
+    <span class="bell-dot"></span>
+</button>
+        <div class="dash-user" onclick="window.location.href='404.html'" style="cursor: pointer;">
+    <div class="dash-user-avatar" data-user-initial>C</div>
+    <div class="dash-user-meta">
+        <strong data-user-name>Client</strong>
+        <span data-user-role>user</span>
+    </div>
+</div>
+      </div>
+    </header>
+
+    <main class="dash-content">
+
+      <!-- ============ VIEW 1 — OVERVIEW ============ -->
+      <section class="dash-view is-active" data-view-id="overview">
+
+        <div class="dash-view-block">
+          <div class="dash-hero-banner">
+            <div class="dash-hero-glow" aria-hidden="true"></div>
+            <div class="dash-hero-content">
+              <span class="eyebrow eyebrow--light"><i class="fa-solid fa-sun"></i> Good to see you</span>
+              <h2>Your coverage is active and in good standing</h2>
+              <p>3 active policies, 1 claim in review, and your next payment is $482 due September 1.</p>
+            </div>
+            <div class="dash-hero-visual" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-stats-grid">
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon"><i class="fa-solid fa-file-shield"></i></div>
+            <div class="dash-stat-num" data-count="3">0</div>
+            <div class="dash-stat-label">Active Policies <span class="dash-stat-trend"><i class="fa-solid fa-check"></i> All current</span></div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon"><i class="fa-solid fa-credit-card"></i></div>
+            <div class="dash-stat-num" data-count="482" data-prefix="$">0</div>
+            <div class="dash-stat-label">Next Payment <span class="dash-stat-trend">Due Sep 1</span></div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div class="dash-stat-num" data-count="1">0</div>
+            <div class="dash-stat-label">Open Claims <span class="dash-stat-trend"><i class="fa-solid fa-clock"></i> In review</span></div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="dash-stat-num" data-count="1200000" data-prefix="$">0</div>
+            <div class="dash-stat-label">Total Coverage <span class="dash-stat-trend"><i class="fa-solid fa-check"></i> Active</span></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-section-head"><h3>Quick Actions</h3></div>
+          <div class="dash-quick-actions">
+            <div class="dash-quick-action"><i class="fa-solid fa-triangle-exclamation"></i><strong>File a Claim</strong><span>Start a new report</span></div>
+            <div class="dash-quick-action"><i class="fa-solid fa-credit-card"></i><strong>Make a Payment</strong><span>$482 due Sep 1</span></div>
+            <div class="dash-quick-action"><i class="fa-solid fa-comment-dots"></i><strong>Message Advisor</strong><span>Priya usually replies fast</span></div>
+            <div class="dash-quick-action"><i class="fa-solid fa-file-arrow-down"></i><strong>Download Docs</strong><span>Certificates &amp; policies</span></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <div><h2>Recent Messages</h2><p>Latest updates from your advisor — open the full inbox for details.</p></div>
+              <a href="404.html"  data-view="messages">Open Messages <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="dash-doc-list" style="padding:8px 22px;">
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-envelope-open-text"></i></div><div class="dash-doc-info"><strong>Priya Kapoor — Your renewal is ready for review</strong><span>10:20 AM · Renewal</span></div></div>
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-envelope-open-text"></i></div><div class="dash-doc-info"><strong>Claims Team — Update on your claim #CW-88213</strong><span>9:02 AM · Claim</span></div></div>
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-envelope-open-text"></i></div><div class="dash-doc-info"><strong>Billing — Payment received, thank you</strong><span>Yesterday · Billing</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-policy-grid">
+          <div class="dash-policy-card">
+            <div class="dash-policy-top"><div class="dash-policy-icon"><i class="fa-solid fa-hard-hat"></i></div><div><h4>General Liability</h4><span>Policy #GL-40921</span></div></div>
+            <div class="dash-policy-figures"><div><strong>$482/mo</strong><span>Premium</span></div><div><strong>$1M</strong><span>Limit</span></div></div>
+            <div class="dash-progress"><div class="dash-progress-fill" data-value="72"></div></div>
+            <div class="dash-progress-label"><span>Renews in 34 days</span><span>72%</span></div>
+          </div>
+          <div class="dash-policy-card">
+            <div class="dash-policy-top"><div class="dash-policy-icon"><i class="fa-solid fa-truck"></i></div><div><h4>Commercial Auto</h4><span>Policy #CA-11837</span></div></div>
+            <div class="dash-policy-figures"><div><strong>$210/mo</strong><span>Premium</span></div><div><strong>$500k</strong><span>Limit</span></div></div>
+            <div class="dash-progress"><div class="dash-progress-fill" data-value="41"></div></div>
+            <div class="dash-progress-label"><span>Renews in 71 days</span><span>41%</span></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============ VIEW 2 — MESSAGES ============ -->
+      <section class="dash-view" data-view-id="messages">
+
+        <div class="dash-view-block dash-mini-stats">
+          <div class="dash-mini-stat"><i class="fa-solid fa-stopwatch"></i><div><strong>&lt; 4 hrs</strong><span>Avg advisor reply</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-envelope-open"></i><div><strong>2</strong><span>Unread messages</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-user-tie"></i><div><strong>Priya Kapoor</strong><span>Your advisor</span></div></div>
+        </div>
+
+        <div class="dash-view-block">
+          <section class="dash-panel">
+            <div class="dash-panel-head">
+              <div>
+                <h2>My Messages</h2>
+                <p>Updates from your named advisor — everything in one place.</p>
+              </div>
+              <div class="dash-tabs" id="dashMailTabs">
+                <button class="dash-tab is-active" data-filter="all">All</button>
+                <button class="dash-tab" data-filter="unread">Unread</button>
+                <button class="dash-tab" data-filter="flagged">Flagged</button>
+              </div>
+            </div>
+            <div class="dash-mail">
+              <div class="dash-mail-list" id="dashMailList"></div>
+              <div class="dash-mail-detail" id="dashMailDetail"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- ============ VIEW 3 — MY POLICIES ============ -->
+      <section class="dash-view" data-view-id="policies">
+
+        <div class="dash-view-block">
+          <div class="dash-hero-banner">
+            <div class="dash-hero-glow" aria-hidden="true"></div>
+            <div class="dash-hero-content">
+              <span class="eyebrow eyebrow--light"><i class="fa-solid fa-file-shield"></i> Your Coverage</span>
+              <h2>3 policies, $1.2M in total coverage</h2>
+              <p>Everything bound and active — no lapses, no gaps.</p>
+            </div>
+            <div class="dash-hero-visual" aria-hidden="true"><i class="fa-solid fa-scale-balanced"></i></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-mini-stats">
+          <div class="dash-mini-stat"><i class="fa-solid fa-file-shield"></i><div><strong>3</strong><span>Active policies</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-sack-dollar"></i><div><strong>$8,184</strong><span>Annual premium</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-calendar-day"></i><div><strong>34 days</strong><span>Next renewal</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-shield-halved"></i><div><strong>$1.2M</strong><span>Total coverage</span></div></div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-chart-card">
+            <div class="dash-section-head"><h3>Coverage Mix</h3><p>Share of your annual premium by policy type.</p></div>
+            <div class="dash-donut-wrap">
+              <div class="dash-donut" data-pct="55"><div class="dash-donut-center"><strong>55%</strong><span>General Liability</span></div></div>
+              <div class="dash-donut-legend">
+                <div class="dash-legend-row"><span class="dash-legend-dot" style="background:var(--emerald);"></span> General Liability <span class="val">55%</span></div>
+                <div class="dash-legend-row"><span class="dash-legend-dot" style="background:#4F6B85;"></span> Commercial Auto <span class="val">26%</span></div>
+                <div class="dash-legend-row"><span class="dash-legend-dot" style="background:var(--line);"></span> Cyber &amp; Data Breach <span class="val">19%</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-policy-grid">
+          <div class="dash-policy-card">
+            <div class="dash-policy-top"><div class="dash-policy-icon"><i class="fa-solid fa-hard-hat"></i></div><div><h4>General Liability</h4><span>Policy #GL-40921</span></div></div>
+            <div class="dash-policy-figures"><div><strong>$482/mo</strong><span>Premium</span></div><div><strong>$1M</strong><span>Limit</span></div></div>
+            <div class="dash-progress"><div class="dash-progress-fill" data-value="72"></div></div>
+            <div class="dash-progress-label"><span>Renews in 34 days</span><span>72%</span></div>
+          </div>
+          <div class="dash-policy-card">
+            <div class="dash-policy-top"><div class="dash-policy-icon"><i class="fa-solid fa-truck"></i></div><div><h4>Commercial Auto</h4><span>Policy #CA-11837</span></div></div>
+            <div class="dash-policy-figures"><div><strong>$210/mo</strong><span>Premium</span></div><div><strong>$500k</strong><span>Limit</span></div></div>
+            <div class="dash-progress"><div class="dash-progress-fill" data-value="41"></div></div>
+            <div class="dash-progress-label"><span>Renews in 71 days</span><span>41%</span></div>
+          </div>
+          <div class="dash-policy-card">
+            <div class="dash-policy-top"><div class="dash-policy-icon"><i class="fa-solid fa-shield-halved"></i></div><div><h4>Cyber &amp; Data Breach</h4><span>Policy #CY-77410</span></div></div>
+            <div class="dash-policy-figures"><div><strong>$150/mo</strong><span>Premium</span></div><div><strong>$1M</strong><span>Limit</span></div></div>
+            <div class="dash-progress"><div class="dash-progress-fill" data-value="90"></div></div>
+            <div class="dash-progress-label"><span>Renews in 9 days</span><span>90%</span></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel" style="padding:24px 26px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+            <div><h3 style="font-size:1rem;font-weight:700;margin-bottom:4px;">Need more coverage?</h3><p style="font-size:.82rem;color:var(--text-soft);">Add a policy or ask your advisor about bundling for a better rate.</p></div>
+<button class="btn btn-primary" onclick="window.location.href='404.html'">
+    <span>Request a Quote</span>
+    <i class="fa-solid fa-arrow-right"></i>
+</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ VIEW 4 — CLAIMS ============ -->
+      <section class="dash-view" data-view-id="claims">
+
+        <div class="dash-view-block">
+          <div class="dash-hero-banner">
+            <div class="dash-hero-glow" aria-hidden="true"></div>
+            <div class="dash-hero-content">
+              <span class="eyebrow eyebrow--light"><i class="fa-solid fa-triangle-exclamation"></i> Claims</span>
+              <h2>1 claim in progress</h2>
+              <p>Track every step from first report to payout.</p>
+            </div>
+            <div class="dash-hero-visual" aria-hidden="true"><i class="fa-solid fa-file-waveform"></i></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-mini-stats">
+          <div class="dash-mini-stat"><i class="fa-solid fa-folder-open"></i><div><strong>1</strong><span>Open claim</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-clock-rotate-left"></i><div><strong>2</strong><span>Past claims</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-stopwatch"></i><div><strong>9 days</strong><span>Avg resolution</span></div></div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel">
+            <div class="dash-panel-head"><div><h2>Claim #CW-88213 — Storm Damage</h2><p>Filed 12 days ago · Assigned to Marcus Webb</p></div></div>
+            <div style="padding:24px 26px;">
+              <div class="dash-timeline">
+                <div class="dash-timeline-step is-done"><div class="dash-timeline-dot"><i class="fa-solid fa-check"></i></div><div class="dash-timeline-body"><h4>Claim reported</h4><span>Aug 1, 2026</span></div></div>
+                <div class="dash-timeline-step is-done"><div class="dash-timeline-dot"><i class="fa-solid fa-check"></i></div><div class="dash-timeline-body"><h4>Adjuster assigned</h4><span>Aug 2, 2026</span></div></div>
+                <div class="dash-timeline-step is-current"><div class="dash-timeline-dot"><i class="fa-solid fa-magnifying-glass"></i></div><div class="dash-timeline-body"><h4>Site inspection complete</h4><span>Aug 9, 2026</span><p>Your adjuster finished the on-site inspection — estimate is being finalized now.</p></div></div>
+                <div class="dash-timeline-step"><div class="dash-timeline-dot"><i class="fa-solid fa-file-invoice-dollar"></i></div><div class="dash-timeline-body"><h4>Estimate &amp; payout</h4><span>Pending</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel">
+            <div class="dash-panel-head"><div><h2>Claim History</h2></div></div>
+            <div class="dash-doc-list" style="padding:8px 26px 20px;">
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-house-chimney-crack"></i></div><div class="dash-doc-info"><strong>Storm damage — roof &amp; siding</strong><span>Filed 12 days ago</span></div><span class="dash-status-pill is-review" style="margin:0;">Inspecting</span></div>
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-car-burst"></i></div><div class="dash-doc-info"><strong>Fleet vehicle collision</strong><span>Resolved · Jan 2026</span></div><span class="dash-status-pill is-active" style="margin:0;">Paid Out</span></div>
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-laptop-medical"></i></div><div class="dash-doc-info"><strong>Minor data incident</strong><span>Resolved · Aug 2025</span></div><span class="dash-status-pill is-active" style="margin:0;">Closed</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel" style="padding:24px 26px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+            <div><h3 style="font-size:1rem;font-weight:700;margin-bottom:4px;">Need to report something new?</h3><p style="font-size:.82rem;color:var(--text-soft);">Most claims get an adjuster assigned within 24 hours.</p></div>
+<button class="btn btn-primary" onclick="window.location.href='404.html'">
+    <span>File a New Claim</span>
+    <i class="fa-solid fa-triangle-exclamation"></i>
+</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ VIEW 5 — PAYMENTS ============ -->
+      <section class="dash-view" data-view-id="payments">
+
+        <div class="dash-view-block">
+          <div class="dash-hero-banner">
+            <div class="dash-hero-glow" aria-hidden="true"></div>
+            <div class="dash-hero-content">
+              <span class="eyebrow eyebrow--light"><i class="fa-solid fa-credit-card"></i> Billing</span>
+              <h2>Your account is fully current</h2>
+              <p>Next payment of $482 is due September 1 — autopay is on.</p>
+            </div>
+            <div class="dash-hero-visual" aria-hidden="true"><i class="fa-solid fa-sack-dollar"></i></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-mini-stats">
+          <div class="dash-mini-stat"><i class="fa-solid fa-calendar-check"></i><div><strong>Sep 1</strong><span>Next payment date</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-sack-dollar"></i><div><strong>$8,184</strong><span>Paid this year</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-rotate"></i><div><strong>On</strong><span>Autopay status</span></div></div>
+        </div>
+
+        <div class="dash-view-block" style="display:grid; grid-template-columns: 340px 1fr; gap:24px;">
+          <div class="dash-payment-card">
+            <div class="dash-payment-chip" aria-hidden="true"></div>
+            <div class="dash-payment-num">•••• •••• •••• 4821</div>
+            <div class="dash-payment-meta"><span>Card Holder<strong data-user-name>Client</strong></span><span>Expires<strong>08/29</strong></span></div>
+          </div>
+
+          <div class="dash-panel" style="padding:24px 26px;">
+            <div class="dash-section-head"><h3>Next Payment</h3></div>
+            <div class="dash-progress"><div class="dash-progress-fill" data-value="68"></div></div>
+            <div class="dash-progress-label"><span>Billing cycle progress</span><span>68%</span></div>
+            <p style="font-size:.85rem;color:var(--text-soft);line-height:1.6;margin:14px 0 18px;">$482.00 will be automatically charged to the card on file on <strong style="color:var(--ink);">September 1, 2026</strong>.</p>
+<button class="btn btn-primary" onclick="window.location.href='404.html'">
+    <span>Manage Payment Method</span>
+    <i class="fa-solid fa-arrow-right"></i>
+</button>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel">
+            <div class="dash-panel-head"><div><h2>Payment History</h2></div></div>
+            <div class="dash-doc-list" style="padding:8px 26px 20px;">
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-receipt"></i></div><div class="dash-doc-info"><strong>August premium — $482.00</strong><span>Paid Aug 1, 2026</span></div><span class="dash-status-pill is-active" style="margin:0;">Paid</span></div>
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-receipt"></i></div><div class="dash-doc-info"><strong>July premium — $482.00</strong><span>Paid Jul 1, 2026</span></div><span class="dash-status-pill is-active" style="margin:0;">Paid</span></div>
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-receipt"></i></div><div class="dash-doc-info"><strong>June premium — $482.00</strong><span>Paid Jun 1, 2026</span></div><span class="dash-status-pill is-active" style="margin:0;">Paid</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ VIEW 6 — DOCUMENTS ============ -->
+      <section class="dash-view" data-view-id="documents">
+
+        <div class="dash-view-block">
+          <div class="dash-hero-banner">
+            <div class="dash-hero-glow" aria-hidden="true"></div>
+            <div class="dash-hero-content">
+              <span class="eyebrow eyebrow--light"><i class="fa-solid fa-file-invoice"></i> Documents</span>
+              <h2>Every policy document, in one folder</h2>
+              <p>Download certificates, declarations pages, and receipts any time.</p>
+            </div>
+            <div class="dash-hero-visual" aria-hidden="true"><i class="fa-solid fa-folder-open"></i></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-tabs dash-simple-tabs" data-target="#docGrid">
+            <button class="dash-tab is-active" data-filter="all">All</button>
+            <button class="dash-tab" data-filter="policy">Policies</button>
+            <button class="dash-tab" data-filter="billing">Billing</button>
+            <button class="dash-tab" data-filter="claim">Claims</button>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-file-grid" id="docGrid">
+
+    <button class="dash-file-card" type="button" onclick="window.location.href='404.html'" data-filetype="pdf" data-category="policy">
+        <div class="dash-file-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        <h4>GL Policy Declarations</h4>
+        <span>PDF · 1.2 MB</span>
+    </button>
+
+    <button class="dash-file-card" type="button" onclick="window.location.href='404.html'" data-filetype="pdf" data-category="policy">
+        <div class="dash-file-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        <h4>Auto Policy Declarations</h4>
+        <span>PDF · 980 KB</span>
+    </button>
+
+    <button class="dash-file-card" type="button" onclick="window.location.href='404.html'" data-filetype="pdf" data-category="policy">
+        <div class="dash-file-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        <h4>Cyber Policy Declarations</h4>
+        <span>PDF · 1.4 MB</span>
+    </button>
+
+    <button class="dash-file-card" type="button" onclick="window.location.href='404.html'" data-filetype="xls" data-category="billing">
+        <div class="dash-file-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <h4>August Invoice</h4>
+        <span>PDF · 210 KB</span>
+    </button>
+
+    <button class="dash-file-card" type="button" onclick="window.location.href='404.html'" data-filetype="xls" data-category="billing">
+        <div class="dash-file-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <h4>July Invoice</h4>
+        <span>PDF · 208 KB</span>
+    </button>
+
+    <button class="dash-file-card" type="button" onclick="window.location.href='404.html'" data-filetype="doc" data-category="claim">
+        <div class="dash-file-icon"><i class="fa-solid fa-file-lines"></i></div>
+        <h4>Claim #CW-88213 Report</h4>
+        <span>DOC · 640 KB</span>
+    </button>
+
+    <button class="dash-file-card" type="button" onclick="window.location.href='404.html'" data-filetype="pdf" data-category="policy">
+        <div class="dash-file-icon"><i class="fa-solid fa-certificate"></i></div>
+        <h4>Certificate of Insurance</h4>
+        <span>PDF · 320 KB</span>
+    </button>
+
+    <button class="dash-file-card" type="button" onclick="window.location.href='404.html'" data-filetype="doc" data-category="claim">
+        <div class="dash-file-icon"><i class="fa-solid fa-file-lines"></i></div>
+        <h4>Fleet Collision Report</h4>
+        <span>DOC · 512 KB</span>
+    </button>
+
+</div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel">
+            <div class="dash-panel-head"><div><h2>Recently Downloaded</h2></div></div>
+            <div class="dash-doc-list" style="padding:8px 26px 20px;">
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-file-pdf"></i></div><div class="dash-doc-info"><strong>GL Policy Declarations.pdf</strong><span>Downloaded 3 days ago</span></div></div>
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div><div class="dash-doc-info"><strong>August Invoice.pdf</strong><span>Downloaded 6 days ago</span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ VIEW 7 — SETTINGS ============ -->
+      <section class="dash-view" data-view-id="settings">
+
+        <div class="dash-view-block">
+          <div class="dash-profile-banner">
+            <div class="dash-hero-glow" aria-hidden="true"></div>
+            <img class="dash-avatar-photo dash-avatar-photo--lg" style="position:relative;z-index:2;" src="Assest/dd9_under_100kb.webp" alt="Profile photo">
+            <div style="position:relative;z-index:2;">
+              <h2 style="font-family:var(--font-display);font-size:1.4rem;font-weight:700;" data-user-name>Client</h2>
+              <p style="color:rgba(243,239,227,0.68);font-size:.88rem;" data-user-email>client@stackly.example</p>
+              <span class="eyebrow eyebrow--light" style="margin-top:8px;"><i class="fa-solid fa-user"></i> Client Access</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel" style="padding:26px;">
+            <div class="dash-section-head"><h3>Personal Information</h3></div>
+            <form>
+              <div class="dash-settings-grid">
+                <div class="form-field"><label>Full name</label><input type="text" value="Mara Torres"></div>
+                <div class="form-field"><label>Email</label><input type="email" value="mara@torresbuild.example"></div>
+                <div class="form-field"><label>Phone</label><input type="tel" value="(555) 040-8823"></div>
+                <div class="form-field"><label>Business</label><input type="text" value="Torres Build Group"></div>
+              </div>
+<button type="button" class="btn btn-primary" style="margin-top:16px;" onclick="window.location.href='404.html'">
+    <span>Save Changes</span>
+    <i class="fa-solid fa-check"></i>
+</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel" style="padding:26px;">
+            <div class="dash-section-head"><h3>Notifications</h3></div>
+            <div class="dash-toggle-row"><div><strong>Advisor messages</strong><span>Email when your advisor sends a message</span></div><label class="dash-switch"><input type="checkbox" checked><span class="dash-switch-track"></span></label></div>
+            <div class="dash-toggle-row"><div><strong>Claim status changes</strong><span>Notify me when my claim moves stages</span></div><label class="dash-switch"><input type="checkbox" checked><span class="dash-switch-track"></span></label></div>
+            <div class="dash-toggle-row"><div><strong>Payment reminders</strong><span>3 days before a payment is due</span></div><label class="dash-switch"><input type="checkbox" checked><span class="dash-switch-track"></span></label></div>
+            <div class="dash-toggle-row"><div><strong>Product news</strong><span>Occasional emails about new coverage options</span></div><label class="dash-switch"><input type="checkbox"><span class="dash-switch-track"></span></label></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel" style="padding:26px;">
+            <div class="dash-section-head"><h3>Security</h3></div>
+            <form>
+              <div class="dash-settings-grid">
+                <div class="form-field"><label>New password</label><input type="password" placeholder="••••••••"></div>
+                <div class="form-field"><label>Confirm password</label><input type="password" placeholder="••••••••"></div>
+              </div>
+              <div class="dash-toggle-row" style="margin-top:6px;"><div><strong>Two-factor authentication</strong><span>Require a code at login</span></div><label class="dash-switch"><input type="checkbox"><span class="dash-switch-track"></span></label></div>
+<button type="button" class="btn btn-primary" style="margin-top:12px;" onclick="window.location.href='404.html'">
+    <span>Update Security</span>
+    <i class="fa-solid fa-lock"></i>
+</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel" style="padding:26px;">
+            <div class="dash-section-head"><h3>How are we doing?</h3></div>
+            <p style="font-size:.85rem;color:var(--text-soft);margin-bottom:12px;">Rate your experience with your advisor this quarter.</p>
+            <div class="dash-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-danger-zone">
+            <h4>Danger Zone</h4>
+            <p>Closing your account cancels all active policies at their next renewal date. This cannot be undone.</p>
+<button class="btn btn-danger" onclick="window.location.href='404.html'">
+    <span>Close Account</span>
+</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<script>
+  window.CW_MAIL_DATA = [
+    { id: 1, sender: 'Priya Kapoor — Advisor', subject: 'Your renewal is ready for review', preview: 'Hi! Your General Liability renewal terms are ready — rate is unchanged…', time: '10:20 AM', unread: true, flagged: true, tag: 'Renewal', body: "Hi there,\n\nGood news — your General Liability renewal is ready and your rate is holding steady from last year (no claims activity helped here). Coverage limits are unchanged at $1M/$2M.\n\nTake a look when you get a chance and let me know if you'd like to walk through anything before it auto-renews on the 1st.\n\nBest,\nPriya" },
+    { id: 2, sender: 'Claims Team', subject: 'Update on your claim #CW-88213', preview: 'Your adjuster has completed the inspection — estimate attached, next…', time: '9:02 AM', unread: true, flagged: false, tag: 'Claim', body: "Your claim #CW-88213 (storm damage) has moved to the estimate stage. Our adjuster completed the on-site inspection yesterday and the repair estimate is now being finalized.\n\nExpect a call within 2 business days to walk through next steps and payout timing." },
+    { id: 3, sender: 'Billing', subject: 'Payment received — thank you', preview: 'We received your payment of $482.00 for your August premium…', time: 'Yesterday', unread: false, flagged: false, tag: 'Billing', body: "This confirms we received your payment of $482.00 applied to your August premium. Your account is fully current — no action needed.\n\nA receipt has been added to your Documents tab." },
+    { id: 4, sender: 'Priya Kapoor — Advisor', subject: 'Quick question about your fleet size', preview: 'Noticed you added a vehicle last month — want to make sure your…', time: 'Mon', unread: false, flagged: true, tag: 'Advisor', body: "Hey — I noticed a new vehicle was added to your registered fleet last month. Just want to make sure your Commercial Auto policy reflects the updated vehicle count so you're not under-covered.\n\nCan you confirm the total number of vehicles currently in operation?" },
+    { id: 5, sender: 'Stackly Team', subject: 'New: Cyber coverage add-on available', preview: "Based on your industry, you may want to consider adding cyber…", time: 'Last week', unread: false, flagged: false, tag: 'Product', body: "Based on your business type, many of our similar clients have added Cyber & Data Breach coverage over the past year. It covers costs from data breaches, ransomware, and customer notification requirements.\n\nReply if you'd like a no-obligation quote added to your existing bundle." }
+  ];
+</script>
+<script src="auth.js"></script>
+</body>
+</html>

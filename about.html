@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Stackly | Business Insurance That Works As Hard As You Do</title>
+<meta name="description" content="Stackly has underwritten commercial insurance since 2009. Meet the people, the milestones and the licensing behind 9,600+ businesses covered nationwide.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">
+    <svg viewBox="0 0 100 100" class="pre-ring-svg">
+      <circle cx="40" cy="50" r="72"/>
+    </svg>
+    <a href="index.html" class="brand-logo">
+    <img src="Assest/stackly-emerald-white.webp" alt="STACKLY" class="brand-logo-img">
+</a>
+  </div>
+</div>
+
+<!-- ============ CURSOR GLOW ============ -->
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- ============ HEADER (same as home) ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="brand-logo">
+    <img src="Assest/stackly-emerald-black.webp" alt="STACKLY" class="brand-logo-img">
+</a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="coverage.html" class="nav-link">Coverage</a>
+      <a href="industries.html" class="nav-link">Industries</a>
+      <a href="about.html" class="nav-link is-active">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="login.html" class="login-btn login-btn-mobile"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+    </nav>
+
+    <div class="header-right">
+      <a href="login.html" class="login-btn">
+        <i class="fa-regular fa-circle-user"></i>
+        <span>Login</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 1. ABOUT HERO — scanline print reveal + stamp seal ============ -->
+<section class="ab-hero" id="ab-hero">
+
+  <!-- Animated background image slider (same system as industries.html hero) -->
+  <div class="hero-bg-photo" data-hero-slider aria-hidden="true">
+    <div class="hero-bg-slide is-active">
+      <img src="Assest/bb1.webp" alt="" loading="eager">
+    </div>
+    <div class="hero-bg-slide">
+      <img src="Assest/bb2.webp" alt="" loading="lazy">
+    </div>
+    <div class="hero-bg-slide">
+      <img src="Assest/bb3.webp" alt="" loading="lazy">
+    </div>
+    <div class="hero-bg-slide">
+      <img src="Assest/bb4.webp" alt="" loading="lazy">
+    </div>
+    <div class="hero-bg-slide">
+      <img src="Assest/bb5_under_100kb.webp" alt="" loading="lazy">
+    </div>
+
+    <div class="hero-scene-indicator">
+      <span class="hero-scene-label">Stackly in motion</span>
+      <div class="hero-scene-dots" role="tablist" aria-label="About hero background scenes">
+        <button class="hero-scene-dot is-active" type="button" aria-label="Show scene 1" aria-selected="true"></button>
+        <button class="hero-scene-dot" type="button" aria-label="Show scene 2" aria-selected="false"></button>
+        <button class="hero-scene-dot" type="button" aria-label="Show scene 3" aria-selected="false"></button>
+        <button class="hero-scene-dot" type="button" aria-label="Show scene 4" aria-selected="false"></button>
+        <button class="hero-scene-dot" type="button" aria-label="Show scene 5" aria-selected="false"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="ab-hero-grain" aria-hidden="true"></div>
+  <div class="ab-hero-inner">
+    <div class="ab-hero-copy">
+      <span class="eyebrow" data-aos="fade-up"><i class="fa-solid fa-building-shield"></i> About Stackly</span>
+      <h1 class="ab-scan-text" id="abScanText" data-aos="fade-up" data-aos-delay="80">
+        Insurance, written by<br>people who've filed<br>the claim too.
+      </h1>
+      <p class="ab-hero-sub" data-aos="fade-up" data-aos-delay="200">
+        We started Stackly after watching too many owners get buried in exclusions they never
+        agreed to. Seventeen years later, we're still underwriting the same way: plain terms,
+        real exposure, a person who picks up the phone.
+      </p>
+      <div class="ab-hero-cta" data-aos="fade-up" data-aos-delay="280">
+        <a href="404.html" class="btn btn-primary"><span>Read Our Story</span><i class="fa-solid fa-arrow-down"></i></a>
+        <a href="404.html" class="btn btn-ghost"><span>Meet an Advisor</span></a>
+      </div>
+    </div>
+
+    <div class="ab-hero-seal-wrap" data-aos="zoom-in" data-aos-delay="200">
+      <div class="ab-seal" id="abSeal">
+        <svg viewBox="0 0 220 220" class="ab-seal-svg">
+          <circle cx="110" cy="110" r="98" class="ab-seal-ring-outer"/>
+          <circle cx="110" cy="110" r="80" class="ab-seal-ring-inner"/>
+          <path id="abSealTextPath" class="ab-seal-textpath" d="M 110,30 A 80,80 0 1 1 109.9,30" fill="none"/>
+          <text class="ab-seal-text">
+            <textPath href="#abSealTextPath" startOffset="0%">SINCE 2009 &#8226; CHICAGO, IL &#8226; LICENSED 50 STATES &#8226; </textPath>
+          </text>
+          <g class="ab-seal-mark">
+            <path d="M110 70 L142 84 V112 C142 136 128 152 110 160 C92 152 78 136 78 112 V84 Z" class="ab-seal-shield"/>
+            <path d="M96 116 L107 128 L128 102" class="ab-seal-check"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. OUR STORY — colorizing origin reel ============ -->
+<section class="section ab-story" id="ab-story">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-film"></i> Our Story</span>
+    <h2 class="reveal-text">From one desk<br>to 9,600 businesses</h2>
+    <p>Every frame below happened in grayscale first — scroll to watch each chapter come into color.</p>
+  </div>
+
+  <div class="ab-reel" id="abReel">
+    <div class="ab-reel-sprockets" aria-hidden="true"></div>
+
+    <div class="ab-reel-frame">
+      <div class="ab-reel-photo"><img src="Assest/bb1.webp" alt="Stackly's first office in 2009" loading="lazy"></div>
+      <div class="ab-reel-copy">
+        <span class="ab-reel-year">2009</span>
+        <h3>A folding table and a fax machine</h3>
+        <p>Two former claims adjusters started Stackly out of a shared office in Chicago, tired of watching carriers bury small businesses in fine print.</p>
+      </div>
+    </div>
+
+    <div class="ab-reel-frame is-reverse">
+      <div class="ab-reel-photo"><img src="Assest/bb2.webp" alt="Early Stackly field team on a jobsite" loading="lazy"></div>
+      <div class="ab-reel-copy">
+        <span class="ab-reel-year">2014</span>
+        <h3>The first named advisor promise</h3>
+        <p>By our fifth year we'd underwritten 1,000 policies — and made a rule that's still true today: one advisor per account, not a call queue.</p>
+      </div>
+    </div>
+
+    <div class="ab-reel-frame">
+      <div class="ab-reel-photo"><img src="Assest/bb3.webp" alt="Stackly fleet coverage expansion" loading="lazy"></div>
+      <div class="ab-reel-copy">
+        <span class="ab-reel-year">2018</span>
+        <h3>Fleet and cyber join the lineup</h3>
+        <p>As clients grew past one location, we built out commercial auto and cyber lines so a growing account never had to shop elsewhere.</p>
+      </div>
+    </div>
+
+    <div class="ab-reel-frame is-reverse">
+      <div class="ab-reel-photo"><img src="Assest/bb4.webp" alt="Stackly advisors reviewing claims together" loading="lazy"></div>
+      <div class="ab-reel-copy">
+        <span class="ab-reel-year">2022</span>
+        <h3>Same-day binding, built in-house</h3>
+        <p>We rebuilt our underwriting stack so a straightforward application could go from quote to bound policy inside one business day.</p>
+      </div>
+    </div>
+
+    <div class="ab-reel-frame">
+      <div class="ab-reel-photo"><img src="Assest/bb5_under_100kb.webp" alt="Stackly headquarters today" loading="lazy"></div>
+      <div class="ab-reel-copy">
+        <span class="ab-reel-year">Today</span>
+        <h3>210 advisors, 50 states, one promise</h3>
+        <p>$310M paid in claims and counting — still answered by a person who knows your account, not a script.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. VALUES — ripple flip-tile grid ============ -->
+<section class="section ab-values" id="ab-values">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-water"></i> What We Believe</span>
+    <h2 class="reveal-text">Six rules that ripple<br>through every policy</h2>
+    <p>Hover any tile — watch the idea move through the ones next to it, the way we mean it to move through the business.</p>
+  </div>
+
+  <div class="ab-ripple-grid" id="abRippleGrid">
+    <div class="ab-ripple-tile" data-row="0" data-col="0">
+      <div class="ab-ripple-inner">
+        <div class="ab-ripple-front"><i class="fa-solid fa-comment-dots"></i><h4>Plain terms</h4></div>
+        <div class="ab-ripple-back"><p>No clause you need a lawyer to translate before you sign.</p></div>
+      </div>
+    </div>
+    <div class="ab-ripple-tile" data-row="0" data-col="1">
+      <div class="ab-ripple-inner">
+        <div class="ab-ripple-front"><i class="fa-solid fa-scale-balanced"></i><h4>Priced on truth</h4></div>
+        <div class="ab-ripple-back"><p>Your real payroll and claims history — never a generic bracket.</p></div>
+      </div>
+    </div>
+    <div class="ab-ripple-tile" data-row="0" data-col="2">
+      <div class="ab-ripple-inner">
+        <div class="ab-ripple-front"><i class="fa-solid fa-phone-volume"></i><h4>We answer</h4></div>
+        <div class="ab-ripple-back"><p>A licensed advisor picks up — not a rotating support queue.</p></div>
+      </div>
+    </div>
+    <div class="ab-ripple-tile" data-row="1" data-col="0">
+      <div class="ab-ripple-inner">
+        <div class="ab-ripple-front"><i class="fa-solid fa-bolt"></i><h4>Fix it fast</h4></div>
+        <div class="ab-ripple-back"><p>Most claims verified and paid inside five business days.</p></div>
+      </div>
+    </div>
+    <div class="ab-ripple-tile" data-row="1" data-col="1">
+      <div class="ab-ripple-inner">
+        <div class="ab-ripple-front"><i class="fa-solid fa-chart-line"></i><h4>Show the math</h4></div>
+        <div class="ab-ripple-back"><p>Every premium comes with the exposure numbers behind it.</p></div>
+      </div>
+    </div>
+    <div class="ab-ripple-tile" data-row="1" data-col="2">
+      <div class="ab-ripple-inner">
+        <div class="ab-ripple-front"><i class="fa-solid fa-seedling"></i><h4>Built to last</h4></div>
+        <div class="ab-ripple-back"><p>Coverage that scales with you instead of forcing a rewrite.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. MILESTONES — split-flap ledger ============ -->
+<section class="ab-ledger" id="ab-ledger">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow eyebrow--light"><i class="fa-solid fa-book-open"></i> The Ledger</span>
+    <h2 class="reveal-text">Milestones,<br>logged like a claim</h2>
+    <p>Scroll — each entry punches in the way our old departures board used to.</p>
+  </div>
+
+  <div class="ab-ledger-board" id="abLedgerBoard">
+
+    <div class="ab-ledger-row" data-year="2009">
+      <div class="ab-flap-year" data-final="2009"></div>
+      <span class="ab-ledger-text">Stackly founded in Chicago by two former claims adjusters.</span>
+      <span class="ab-ledger-tag">Founding</span>
+    </div>
+
+    <div class="ab-ledger-row" data-year="2012">
+      <div class="ab-flap-year" data-final="2012"></div>
+      <span class="ab-ledger-text">First 500 businesses underwritten across the Midwest.</span>
+      <span class="ab-ledger-tag">Growth</span>
+    </div>
+
+    <div class="ab-ledger-row" data-year="2016">
+      <div class="ab-flap-year" data-final="2016"></div>
+      <span class="ab-ledger-text">Licensed to write coverage in all 50 states.</span>
+      <span class="ab-ledger-tag">Licensing</span>
+    </div>
+
+    <div class="ab-ledger-row" data-year="2019">
+      <div class="ab-flap-year" data-final="2019"></div>
+      <span class="ab-ledger-text">Cyber &amp; data breach added as a standalone coverage line.</span>
+      <span class="ab-ledger-tag">Product</span>
+    </div>
+
+    <div class="ab-ledger-row" data-year="2023">
+      <div class="ab-flap-year" data-final="2023"></div>
+      <span class="ab-ledger-text">Same-day binding launched; average time-to-bind drops to 1 day.</span>
+      <span class="ab-ledger-tag">Product</span>
+    </div>
+
+    <div class="ab-ledger-row" data-year="2026">
+      <div class="ab-flap-year" data-final="2026"></div>
+      <span class="ab-ledger-text">$310M paid in claims; 9,600+ businesses currently underwritten.</span>
+      <span class="ab-ledger-tag">Today</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 5. LEADERSHIP — rolodex fan carousel ============ -->
+<section class="section ab-leadership" id="ab-leadership">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-id-badge"></i> Leadership</span>
+    <h2 class="reveal-text">The people who<br>sign off on your policy</h2>
+    <p>Click through the deck — every card is someone who still takes underwriting calls.</p>
+  </div>
+
+  <div class="ab-rolodex" id="abRolodex">
+    <div class="ab-rolodex-stack" id="abRolodexStack">
+      <article class="ab-rolodex-card is-active" data-idx="0">
+        <img src="Assest/bbb1.webp" alt="Head of Underwriting">
+        <div class="ab-rolodex-info"><strong>Priya Kapoor</strong><span>Head of Underwriting</span></div>
+      </article>
+      <article class="ab-rolodex-card" data-idx="1">
+        <img src="Assest/bbb2.webp" alt="Chief Claims Officer">
+        <div class="ab-rolodex-info"><strong>Marcus Webb</strong><span>Chief Claims Officer</span></div>
+      </article>
+      <article class="ab-rolodex-card" data-idx="2">
+        <img src="Assest/bbb3.webp" alt="Head of Broker Relations">
+        <div class="ab-rolodex-info"><strong>Elena Torres</strong><span>Head of Broker Relations</span></div>
+      </article>
+      <article class="ab-rolodex-card" data-idx="3">
+        <img src="Assest/bbb4.webp" alt="VP of Product">
+        <div class="ab-rolodex-info"><strong>James Lin</strong><span>VP of Product</span></div>
+      </article>
+      <article class="ab-rolodex-card" data-idx="4">
+        <img src="Assest/bbb5.webp" alt="Chief Financial Officer">
+        <div class="ab-rolodex-info"><strong>Dara Whitfield</strong><span>Chief Financial Officer</span></div>
+      </article>
+      <article class="ab-rolodex-card" data-idx="5">
+        <img src="Assest/bbb6.webp" alt="Chief Executive Officer">
+        <div class="ab-rolodex-info"><strong>Amara Osei</strong><span>Chief Executive Officer</span></div>
+      </article>
+    </div>
+    <div class="ab-rolodex-controls">
+      <button id="abRolodexPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+      <button id="abRolodexNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. LICENSING — dot-assembled shield ============ -->
+<section class="section ab-licensing" id="ab-licensing">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-scale-unbalanced"></i> Licensing</span>
+    <h2 class="reveal-text">Licensed everywhere<br>we say we are</h2>
+    <p>Scroll into view — every dot below is part of one shield, and every dot represents a state we're licensed to write in.</p>
+  </div>
+
+  <div class="ab-dotshield-wrap">
+    <div class="ab-dotshield" id="abDotShield" aria-hidden="true"></div>
+    <div class="ab-license-stats">
+      <div class="ab-license-stat">
+        <strong data-count="50">0</strong>
+        <span>States licensed</span>
+      </div>
+      <div class="ab-license-stat">
+        <strong data-count="210">0</strong>
+        <span>Licensed advisors</span>
+      </div>
+      <div class="ab-license-stat">
+        <strong data-count="17" data-suffix="+">0</strong>
+        <span>Years underwriting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. CTA — magnetic dot field ============ -->
+<section class="ab-cta" id="ab-cta">
+  <div class="ab-cta-dots" id="abCtaDots" aria-hidden="true"></div>
+  <div class="ab-cta-inner" data-aos="zoom-in">
+    <span class="eyebrow eyebrow--light"><i class="fa-solid fa-handshake"></i> Work With Us</span>
+    <h2 class="reveal-text">Same people, same<br>promise, your policy.</h2>
+    <p>No call queue, no generic bracket — just an advisor who reads your business before they quote it.</p>
+    <a href="404.html" class="btn btn-primary"><span>Talk to Stackly</span><i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ============ FOOTER (same as home) ============ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="brand-logo">
+    <img src="Assest/stackly-emerald-black.webp" alt="STACKLY" class="brand-logo-img">
+</a>
+      <p>Plain-terms commercial insurance for businesses, since 2009. Licensed in all 50 states.</p>
+      <div class="footer-newsletter">
+  <input
+  type="email"
+  placeholder="Your email for risk &amp; coverage tips"
+>
+
+  <button aria-label="Subscribe">
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</div>
+    </div>
+
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <a href="index.html">Home</a>
+      <a href="coverage.html">Coverage</a>
+      <a href="industries.html">Industries</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="404.html">About Us</a>
+      <a href="404.html">How It Works</a>
+      <a href="404.html">Plans &amp; Pricing</a>
+      <a href="404.html">FAQs</a>
+      <a href="404.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="404.html">Privacy Policy</a>
+      <a href="404.html">Terms of Service</a>
+      <a href="404.html">Claims Disclosure</a>
+      <a href="404.html">Licensing</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Stackly Business Insurance. All rights reserved.</span>
+    <div class="footer-socials">
+      <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

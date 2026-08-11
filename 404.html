@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | Coverwell Business Insurance</title>
+<meta name="description" content="This page doesn't exist. Head back to Coverwell's homepage or return to where you came from.">
+<meta name="robots" content="noindex">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="404.css">
+</head>
+<body class="err-body">
+
+<div class="err-scene">
+  <div class="err-bg-photo" aria-hidden="true">
+    <img src="Assest/bb10.webp" alt="">
+  </div>
+
+  <div class="err-stars" aria-hidden="true"></div>
+
+  <a href="index.html#home" class="err-logo">
+    <span class="err-logo-text">Stack<em>Ly</em></span>
+  </a>
+
+  <div class="err-card">
+    <div class="err-radar" aria-hidden="true">
+      <span class="err-radar-ring r1"></span>
+      <span class="err-radar-ring r2"></span>
+      <span class="err-radar-ring r3"></span>
+      <span class="err-radar-sweep"></span>
+      <span class="err-orbit-icon o1"><i class="fa-solid fa-file-circle-question"></i></span>
+      <span class="err-orbit-icon o2"><i class="fa-solid fa-link-slash"></i></span>
+      <span class="err-orbit-icon o3"><i class="fa-solid fa-compass"></i></span>
+      <div class="err-radar-core"><i class="fa-solid fa-shield-halved"></i></div>
+    </div>
+
+    <div class="err-copy">
+      <span class="err-code">404</span>
+      <h1>This page didn't<br>make the cut.</h1>
+      <p>The page you're looking for has moved, been renamed, or never existed in the first
+        place — kind of like an uncovered exclusion. Let's get you back to solid ground.</p>
+
+      <div class="err-actions">
+        <a href="index.html#home" class="err-btn err-btn-primary">
+          <i class="fa-solid fa-house"></i><span>Go to Homepage</span>
+        </a>
+        <button type="button" class="err-btn err-btn-ghost" id="errBackBtn">
+          <i class="fa-solid fa-arrow-left"></i><span>Go Back</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <span class="err-foot">© 2026 Coverwell Business Insurance</span>
+</div>
+
+<script>
+  document.getElementById('errBackBtn').addEventListener('click', function () {
+    if (window.history.length > 1 && document.referrer) {
+      window.history.back();
+    } else {
+      window.location.href = 'index.html#home';
+    }
+  });
+</script>
+</body>
+</html>

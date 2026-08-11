@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coverage Library | Stackly Business Insurance</title>
+<meta name="description" content="Explore every Stackly coverage line — General Liability, Property, Cyber, Professional Liability, Workers' Comp and Fleet — what's included, what's excluded, and how limits work.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">
+    <svg viewBox="0 0 100 100" class="pre-ring-svg">
+      <circle cx="40" cy="50" r="72"/>
+    </svg>
+    <a href="index.html" class="brand-logo">
+    <img src="Assest/stackly-emerald-white.webp" alt="STACKLY" class="brand-logo-img">
+</a>
+  </div>
+</div>
+
+<!-- ============ CURSOR GLOW ============ -->
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- ============ HEADER (same as home) ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="brand-logo">
+    <img src="Assest/stackly-emerald-black.webp" alt="STACKLY" class="brand-logo-img">
+</a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="coverage.html" class="nav-link is-active">Coverage</a>
+      <a href="industries.html" class="nav-link">Industries</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="login.html" class="login-btn login-btn-mobile"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+    </nav>
+
+    <div class="header-right">
+      <a href="login.html" class="login-btn">
+        <i class="fa-regular fa-circle-user"></i>
+        <span>Login</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 1. COVERAGE HERO ============ -->
+<section class="cvg-hero" id="cvg-hero">
+
+  <!-- Animated background image slider (same system as the homepage hero) -->
+  <div class="hero-bg-photo" data-hero-slider aria-hidden="true">
+    <div class="hero-bg-slide is-active">
+      <img src="Assest/bb25.webp" alt="" loading="eager">
+    </div>
+    <div class="hero-bg-slide">
+      <img src="Assest/bb26.webp" alt="" loading="lazy">
+    </div>
+    <div class="hero-bg-slide">
+      <img src="Assest/bb27.webp" alt="" loading="lazy">
+    </div>
+    <div class="hero-bg-slide">
+      <img src="Assest/bb28.webp" alt="" loading="lazy">
+    </div>
+    <div class="hero-bg-slide">
+      <img src="Assest/bb3.webp" alt="" loading="lazy">
+    </div>
+
+    <div class="hero-scene-indicator">
+      <span class="hero-scene-label">Coverage in motion</span>
+      <div class="hero-scene-dots" role="tablist" aria-label="Coverage hero background scenes">
+        <button class="hero-scene-dot is-active" type="button" aria-label="Show scene 1" aria-selected="true"></button>
+        <button class="hero-scene-dot" type="button" aria-label="Show scene 2" aria-selected="false"></button>
+        <button class="hero-scene-dot" type="button" aria-label="Show scene 3" aria-selected="false"></button>
+        <button class="hero-scene-dot" type="button" aria-label="Show scene 4" aria-selected="false"></button>
+        <button class="hero-scene-dot" type="button" aria-label="Show scene 5" aria-selected="false"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cvg-hero-orbit" aria-hidden="true">
+    <div class="cvg-orbit-ring cvg-orbit-ring--a">
+      <span class="cvg-orbit-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+      <span class="cvg-orbit-icon"><i class="fa-solid fa-building-shield"></i></span>
+      <span class="cvg-orbit-icon"><i class="fa-solid fa-lock"></i></span>
+    </div>
+    <div class="cvg-orbit-ring cvg-orbit-ring--b">
+      <span class="cvg-orbit-icon"><i class="fa-solid fa-user-tie"></i></span>
+      <span class="cvg-orbit-icon"><i class="fa-solid fa-helmet-safety"></i></span>
+      <span class="cvg-orbit-icon"><i class="fa-solid fa-truck-fast"></i></span>
+    </div>
+  </div>
+
+  <div class="cvg-hero-inner">
+    <div class="cvg-hero-copy">
+      <span class="eyebrow" data-aos="fade-up"><i class="fa-solid fa-layer-group"></i> Coverage Library</span>
+      <h1 class="reveal-text" data-aos="fade-up" data-aos-delay="80">Every policy your<br>business could need.</h1>
+      <p class="cvg-hero-sub" data-aos="fade-up" data-aos-delay="160">
+        Six coverage lines, written in plain English and priced on your real exposure — not a generic bracket.
+        Scroll through what each one actually protects, what's excluded, and how limits shape your premium.
+      </p>
+      <div class="cvg-hero-cta" data-aos="fade-up" data-aos-delay="240">
+        <a href="#cvg-lines" class="btn btn-primary"><span>Browse Coverage Lines</span><i class="fa-solid fa-arrow-down"></i></a>
+        <a href="index.html#pricing" class="btn btn-ghost"><span>See Plan Pricing</span></a>
+      </div>
+    </div>
+
+    <div class="cvg-hero-visual" data-aos="zoom-in" data-aos-delay="200">
+      <div class="cvg-doc-card">
+        <svg viewBox="0 0 300 220" class="cvg-doc-svg" aria-hidden="true">
+          <rect x="30" y="18" width="240" height="184" rx="16" class="cvg-doc-rect"/>
+          <circle cx="70" cy="52" r="10" class="cvg-doc-seal"/>
+          <path class="cvg-doc-line l1" d="M92 48 H240"/>
+          <path class="cvg-doc-line l2" d="M92 56 H210"/>
+          <path class="cvg-doc-line l3" d="M50 90 H250"/>
+          <path class="cvg-doc-line l4" d="M50 112 H250"/>
+          <path class="cvg-doc-line l5" d="M50 134 H190"/>
+          <path class="cvg-doc-check" d="M60 168 L82 188 L136 148"/>
+        </svg>
+        <div class="cvg-doc-badge"><i class="fa-solid fa-bolt"></i> Bound same-day</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. STICKY CATEGORY NAV ============ -->
+<div class="cvg-subnav-wrap" id="cvgSubnavWrap">
+  <nav class="cvg-subnav" id="cvgSubnav" aria-label="Coverage sections">
+    <span class="cvg-subnav-thumb" id="cvgSubnavThumb" aria-hidden="true"></span>
+    <button class="cvg-subnav-item is-active" data-target="#cvg-lines"><i class="fa-solid fa-shapes"></i> Coverage Lines</button>
+    <button class="cvg-subnav-item" data-target="#cvg-compare"><i class="fa-solid fa-list-check"></i> Included / Excluded</button>
+    <button class="cvg-subnav-item" data-target="#cvg-calculator"><i class="fa-solid fa-sliders"></i> Limits Calculator</button>
+    <button class="cvg-subnav-item" data-target="#cvg-addons"><i class="fa-solid fa-puzzle-piece"></i> Add-ons</button>
+    <button class="cvg-subnav-item" data-target="#cvg-claims"><i class="fa-solid fa-route"></i> Claims Steps</button>
+    <button class="cvg-subnav-item" data-target="#cvg-faq"><i class="fa-solid fa-circle-question"></i> FAQ</button>
+  </nav>
+</div>
+
+<!-- ============ 3. COVERAGE LINES — STACKED SCROLL CARDS ============ -->
+<section class="section cvg-lines" id="cvg-lines">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-shapes"></i> Coverage Lines</span>
+    <h2 class="reveal-text">Six lines, stacked<br>and ready to combine</h2>
+    <p>Scroll through each line below — the cards stack as you go, the same way we layer coverage across your account.</p>
+  </div>
+
+  <div class="cvg-stack">
+    <article class="cvg-stack-card" style="--i:0;">
+      <div class="cvg-stack-media">
+        <img src="Assest/bb25.webp" alt="Two professionals shaking hands after a liability review" loading="lazy">
+      </div>
+      <div class="cvg-stack-content">
+        <span class="cvg-stack-num">01</span>
+        <i class="fa-solid fa-scale-balanced"></i>
+        <h3>General Liability</h3>
+        <p>The foundation policy for almost every business — covers third-party bodily injury, property damage and the legal defense that comes with it.</p>
+        <ul class="cvg-stack-points">
+          <li><i class="fa-solid fa-check"></i> Bodily injury &amp; property damage</li>
+          <li><i class="fa-solid fa-check"></i> Legal defense costs</li>
+          <li><i class="fa-solid fa-check"></i> Products &amp; completed operations</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="cvg-stack-card" style="--i:1;">
+      <div class="cvg-stack-media">
+        <img src="Assest/bb5_under_100kb.webp" alt="Commercial building exterior representing insured property" loading="lazy">
+      </div>
+      <div class="cvg-stack-content">
+        <span class="cvg-stack-num">02</span>
+        <i class="fa-solid fa-building-shield"></i>
+        <h3>Commercial Property</h3>
+        <p>Your building, equipment and inventory, rebuilt at replacement cost — not depreciated value — after fire, storm or theft.</p>
+        <ul class="cvg-stack-points">
+          <li><i class="fa-solid fa-check"></i> Building &amp; structure</li>
+          <li><i class="fa-solid fa-check"></i> Equipment &amp; inventory</li>
+          <li><i class="fa-solid fa-check"></i> Business income loss</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="cvg-stack-card" style="--i:2;">
+      <div class="cvg-stack-media">
+        <img src="Assest/bb26.webp" alt="Data center server racks representing cyber coverage" loading="lazy">
+      </div>
+      <div class="cvg-stack-content">
+        <span class="cvg-stack-num">03</span>
+        <i class="fa-solid fa-lock"></i>
+        <h3>Cyber &amp; Data Breach</h3>
+        <p>Ransomware, breach notification costs and downtime, covered end to end — plus access to forensic and PR response teams.</p>
+        <ul class="cvg-stack-points">
+          <li><i class="fa-solid fa-check"></i> Ransomware &amp; extortion</li>
+          <li><i class="fa-solid fa-check"></i> Breach notification costs</li>
+          <li><i class="fa-solid fa-check"></i> Network downtime income loss</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="cvg-stack-card" style="--i:3;">
+      <div class="cvg-stack-media">
+        <img src="Assest/bb27.webp" alt="Consultant presenting advice to a client" loading="lazy">
+      </div>
+      <div class="cvg-stack-content">
+        <span class="cvg-stack-num">04</span>
+        <i class="fa-solid fa-user-tie"></i>
+        <h3>Professional Liability</h3>
+        <p>Errors &amp; omissions protection for the advice, designs or services you sell — even when the mistake was an honest one.</p>
+        <ul class="cvg-stack-points">
+          <li><i class="fa-solid fa-check"></i> Negligence &amp; errors claims</li>
+          <li><i class="fa-solid fa-check"></i> Missed deadlines or deliverables</li>
+          <li><i class="fa-solid fa-check"></i> Client contract disputes</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="cvg-stack-card" style="--i:4;">
+      <div class="cvg-stack-media">
+        <img src="Assest/bb28.webp" alt="Warehouse worker wearing a hard hat" loading="lazy">
+      </div>
+      <div class="cvg-stack-content">
+        <span class="cvg-stack-num">05</span>
+        <i class="fa-solid fa-helmet-safety"></i>
+        <h3>Workers' Compensation</h3>
+        <p>Medical care and lost wages for on-the-job injuries — required in nearly every state, and built around your actual payroll.</p>
+        <ul class="cvg-stack-points">
+          <li><i class="fa-solid fa-check"></i> Medical treatment costs</li>
+          <li><i class="fa-solid fa-check"></i> Lost wage replacement</li>
+          <li><i class="fa-solid fa-check"></i> Employer liability defense</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="cvg-stack-card" style="--i:5;">
+      <div class="cvg-stack-media">
+        <img src="Assest/bb3.webp" alt="Commercial delivery fleet on the road" loading="lazy">
+      </div>
+      <div class="cvg-stack-content">
+        <span class="cvg-stack-num">06</span>
+        <i class="fa-solid fa-truck-fast"></i>
+        <h3>Commercial Auto &amp; Fleet</h3>
+        <p>Company vehicles and drivers, from one van to a full fleet — liability, collision and comprehensive under one policy.</p>
+        <ul class="cvg-stack-points">
+          <li><i class="fa-solid fa-check"></i> Liability &amp; collision</li>
+          <li><i class="fa-solid fa-check"></i> Hired &amp; non-owned autos</li>
+          <li><i class="fa-solid fa-check"></i> Roadside &amp; downtime support</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 4. INCLUDED / EXCLUDED — SLIDING TOGGLE ============ -->
+<section class="section cvg-compare" id="cvg-compare">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-list-check"></i> Know Before You Bind</span>
+    <h2 class="reveal-text">What's included —<br>and what isn't</h2>
+    <p>General Liability, as an example. Flip the switch to see both sides of the same policy.</p>
+  </div>
+
+  <div class="cvg-compare-panel" data-aos="zoom-in">
+    <div class="cvg-toggle" role="tablist">
+      <button class="cvg-toggle-btn is-active" data-panel="included" role="tab" aria-selected="true">
+        <i class="fa-solid fa-circle-check"></i> What's Included
+      </button>
+      <button class="cvg-toggle-btn" data-panel="excluded" role="tab" aria-selected="false">
+        <i class="fa-solid fa-circle-xmark"></i> What's Excluded
+      </button>
+      <span class="cvg-toggle-thumb" id="cvgToggleThumb" aria-hidden="true"></span>
+    </div>
+
+    <div class="cvg-compare-body">
+      <ul class="cvg-compare-list is-visible" data-panel="included">
+        <li><i class="fa-solid fa-circle-check"></i> Third-party bodily injury &amp; property damage</li>
+        <li><i class="fa-solid fa-circle-check"></i> Legal defense costs, even if the claim is groundless</li>
+        <li><i class="fa-solid fa-circle-check"></i> Products &amp; completed operations liability</li>
+        <li><i class="fa-solid fa-circle-check"></i> Advertising injury &amp; reputational claims</li>
+        <li><i class="fa-solid fa-circle-check"></i> Medical payments to injured third parties</li>
+        <li><i class="fa-solid fa-circle-check"></i> Damage to rented premises you occupy</li>
+      </ul>
+      <ul class="cvg-compare-list" data-panel="excluded">
+        <li><i class="fa-solid fa-circle-xmark"></i> Intentional acts or criminal conduct</li>
+        <li><i class="fa-solid fa-circle-xmark"></i> Employee injuries — that's workers' comp</li>
+        <li><i class="fa-solid fa-circle-xmark"></i> Professional advice or service errors — that's E&amp;O</li>
+        <li><i class="fa-solid fa-circle-xmark"></i> Vehicle accidents — that's commercial auto</li>
+        <li><i class="fa-solid fa-circle-xmark"></i> Data breach &amp; cyber incidents — that's cyber coverage</li>
+        <li><i class="fa-solid fa-circle-xmark"></i> Damage to your own property — that's commercial property</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. LIMITS CALCULATOR — LIVE SLIDER ============ -->
+<section class="section cvg-calc" id="cvg-calculator">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-sliders"></i> Try It Yourself</span>
+    <h2 class="reveal-text">See how limits<br>shape your premium</h2>
+    <p>Drag the sliders — this is a quick illustration, not a bound quote, but it shows how the math moves.</p>
+  </div>
+
+  <div class="cvg-calc-panel" data-aos="fade-up">
+    <div class="cvg-calc-left">
+      <div class="cvg-calc-field">
+        <div class="cvg-calc-field-head">
+          <label for="cvgLimitRange">Liability limit</label>
+          <span class="cvg-calc-live" id="cvgLimitValue">$1.0M</span>
+        </div>
+        <input type="range" id="cvgLimitRange" min="500000" max="5000000" step="250000" value="1000000">
+        <div class="cvg-calc-track-labels"><span>$500K</span><span>$5M</span></div>
+      </div>
+
+      <div class="cvg-calc-field">
+        <div class="cvg-calc-field-head">
+          <label for="cvgPayrollRange">Annual payroll</label>
+          <span class="cvg-calc-live" id="cvgPayrollValue">$500K</span>
+        </div>
+        <input type="range" id="cvgPayrollRange" min="100000" max="3000000" step="100000" value="500000">
+        <div class="cvg-calc-track-labels"><span>$100K</span><span>$3M</span></div>
+      </div>
+
+      <div class="cvg-calc-field">
+        <div class="cvg-calc-field-head">
+          <label for="cvgLocationsRange">Locations covered</label>
+          <span class="cvg-calc-live" id="cvgLocationsValue">1</span>
+        </div>
+        <input type="range" id="cvgLocationsRange" min="1" max="10" step="1" value="1">
+        <div class="cvg-calc-track-labels"><span>1</span><span>10</span></div>
+      </div>
+    </div>
+
+    <div class="cvg-calc-result">
+      <span class="cvg-calc-label">Estimated monthly premium</span>
+      <div class="cvg-calc-number"><span>$</span><strong id="cvgCalcOutput">61</strong><span>/mo</span></div>
+      <div class="cvg-calc-bar"><div class="cvg-calc-bar-fill" id="cvgCalcBarFill"></div></div>
+      <p class="cvg-calc-note">Illustrative estimate only — your bound premium is based on full underwriting.</p>
+      <a href="index.html#contact" class="btn btn-primary btn-block"><span>Get My Real Quote</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. ADD-ONS — EXPANDING CHIPS ============ -->
+<section class="section cvg-addons" id="cvg-addons">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-puzzle-piece"></i> Endorsements</span>
+    <h2 class="reveal-text">Add-ons that close<br>the gaps in a base policy</h2>
+    <p>Tap any add-on to see what it covers. Stack as many as your risk profile needs.</p>
+  </div>
+
+  <div class="cvg-chip-grid">
+    <button class="cvg-chip" data-aos="fade-up" data-aos-delay="0">
+      <span class="cvg-chip-head"><i class="fa-solid fa-house-flood-water"></i> Flood &amp; Water Backup <i class="fa-solid fa-chevron-down cvg-chip-caret"></i></span>
+      <span class="cvg-chip-detail"><span>Adds coverage for flood and sewer/drain backup events, which are typically excluded from standard property policies.</span></span>
+    </button>
+    <button class="cvg-chip" data-aos="fade-up" data-aos-delay="60">
+      <span class="cvg-chip-head"><i class="fa-solid fa-gears"></i> Equipment Breakdown <i class="fa-solid fa-chevron-down cvg-chip-caret"></i></span>
+      <span class="cvg-chip-detail"><span>Covers repair or replacement when boilers, HVAC systems or production machinery fail mechanically or electrically.</span></span>
+    </button>
+    <button class="cvg-chip" data-aos="fade-up" data-aos-delay="120">
+      <span class="cvg-chip-head"><i class="fa-solid fa-people-arrows"></i> Employment Practices <i class="fa-solid fa-chevron-down cvg-chip-caret"></i></span>
+      <span class="cvg-chip-detail"><span>Protects against claims of wrongful termination, discrimination or harassment brought by current or former employees.</span></span>
+    </button>
+    <button class="cvg-chip" data-aos="fade-up" data-aos-delay="180">
+      <span class="cvg-chip-head"><i class="fa-solid fa-user-secret"></i> Cyber Extortion <i class="fa-solid fa-chevron-down cvg-chip-caret"></i></span>
+      <span class="cvg-chip-detail"><span>Reimburses ransom negotiation and payment costs on top of your base cyber policy's breach response coverage.</span></span>
+    </button>
+    <button class="cvg-chip" data-aos="fade-up" data-aos-delay="240">
+      <span class="cvg-chip-head"><i class="fa-solid fa-umbrella"></i> Umbrella &amp; Excess <i class="fa-solid fa-chevron-down cvg-chip-caret"></i></span>
+      <span class="cvg-chip-detail"><span>Extends limits above your general liability and auto policies once those primary limits are exhausted.</span></span>
+    </button>
+    <button class="cvg-chip" data-aos="fade-up" data-aos-delay="300">
+      <span class="cvg-chip-head"><i class="fa-solid fa-car-side"></i> Hired &amp; Non-Owned Auto <i class="fa-solid fa-chevron-down cvg-chip-caret"></i></span>
+      <span class="cvg-chip-detail"><span>Covers liability when employees drive rental or personal vehicles on company business.</span></span>
+    </button>
+    <button class="cvg-chip" data-aos="fade-up" data-aos-delay="360">
+      <span class="cvg-chip-head"><i class="fa-solid fa-user-tie"></i> Key Person <i class="fa-solid fa-chevron-down cvg-chip-caret"></i></span>
+      <span class="cvg-chip-detail"><span>Pays out if a founder or critical employee becomes unable to work, helping cover revenue disruption.</span></span>
+    </button>
+    <button class="cvg-chip" data-aos="fade-up" data-aos-delay="420">
+      <span class="cvg-chip-head"><i class="fa-solid fa-chart-line"></i> Business Interruption <i class="fa-solid fa-chevron-down cvg-chip-caret"></i></span>
+      <span class="cvg-chip-detail"><span>Replaces lost income and covers ongoing expenses while you rebuild after a covered property loss.</span></span>
+    </button>
+  </div>
+</section>
+
+<!-- ============ 7. CLAIMS STEPS — SCROLL-DRAWN LINE ============ -->
+<section class="section cvg-claims" id="cvg-claims">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-route"></i> The Claims Path</span>
+    <h2 class="reveal-text">From incident<br>to payout</h2>
+    <p>Scroll to watch the line connect — the same path your claim travels inside the app.</p>
+  </div>
+
+  <div class="cvg-claims-wrap">
+    <svg class="cvg-claims-svg" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true">
+      <path id="cvgClaimsTrack" class="cvg-claims-track" d="M20 20 H980"/>
+      <path id="cvgClaimsPath" class="cvg-claims-draw" d="M20 20 H980"/>
+    </svg>
+    <div class="cvg-claims-steps" id="cvgClaimsSteps">
+      <div class="cvg-claims-step">
+        <span class="cvg-claims-node"><i class="fa-solid fa-camera"></i></span>
+        <h4>Report &amp; Document</h4>
+        <p>Snap photos and log details in the app within minutes of the incident.</p>
+      </div>
+      <div class="cvg-claims-step">
+        <span class="cvg-claims-node"><i class="fa-solid fa-user-check"></i></span>
+        <h4>Adjuster Assigned</h4>
+        <p>A licensed adjuster is matched to your claim, usually within the hour.</p>
+      </div>
+      <div class="cvg-claims-step">
+        <span class="cvg-claims-node"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <h4>Review &amp; Verify</h4>
+        <p>Coverage and damages are verified directly against your policy terms.</p>
+      </div>
+      <div class="cvg-claims-step">
+        <span class="cvg-claims-node"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+        <h4>Paid Out</h4>
+        <p>Approved funds are released — most claims paid within 5 business days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. COVERAGE FAQ ============ -->
+<section class="section cvg-faq" id="cvg-faq">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-circle-question"></i> Coverage FAQ</span>
+    <h2 class="reveal-text">Still deciding what<br>you actually need?</h2>
+  </div>
+
+  <div class="cvg-faq-list">
+    <div class="cvg-faq-item" data-aos="fade-up" data-aos-delay="0">
+      <button class="cvg-faq-q" aria-expanded="true">
+        <span>Can I combine multiple coverage lines under one policy?</span>
+        <span class="cvg-faq-icon"><i class="fa-solid fa-plus cvg-icon-plus"></i><i class="fa-solid fa-minus cvg-icon-minus"></i></span>
+      </button>
+      <div class="cvg-faq-a"><div class="cvg-faq-a-inner"><p>Yes — most businesses bundle General Liability, Property and Cyber under one account with a single advisor and one renewal date, which is also how the bundling discount applies.</p></div></div>
+    </div>
+    <div class="cvg-faq-item" data-aos="fade-up" data-aos-delay="60">
+      <button class="cvg-faq-q" aria-expanded="false">
+        <span>Do I need Professional Liability if I already have General Liability?</span>
+        <span class="cvg-faq-icon"><i class="fa-solid fa-plus cvg-icon-plus"></i><i class="fa-solid fa-minus cvg-icon-minus"></i></span>
+      </button>
+      <div class="cvg-faq-a"><div class="cvg-faq-a-inner"><p>Usually, yes. General Liability responds to physical injury or property damage, while Professional Liability responds to financial loss caused by advice, a missed deadline, or a service error — two very different exposures.</p></div></div>
+    </div>
+    <div class="cvg-faq-item" data-aos="fade-up" data-aos-delay="120">
+      <button class="cvg-faq-q" aria-expanded="false">
+        <span>How are my liability limits chosen?</span>
+        <span class="cvg-faq-icon"><i class="fa-solid fa-plus cvg-icon-plus"></i><i class="fa-solid fa-minus cvg-icon-minus"></i></span>
+      </button>
+      <div class="cvg-faq-a"><div class="cvg-faq-a-inner"><p>We start from your revenue, contracts and industry norms, then layer in anything your landlord or clients contractually require. The calculator above gives a rough feel for how limits move the number.</p></div></div>
+    </div>
+    <div class="cvg-faq-item" data-aos="fade-up" data-aos-delay="180">
+      <button class="cvg-faq-q" aria-expanded="false">
+        <span>What isn't covered by any standard policy?</span>
+        <span class="cvg-faq-icon"><i class="fa-solid fa-plus cvg-icon-plus"></i><i class="fa-solid fa-minus cvg-icon-minus"></i></span>
+      </button>
+      <div class="cvg-faq-a"><div class="cvg-faq-a-inner"><p>Intentional acts, criminal conduct, and losses from war or nuclear events are excluded across every line. Flood, cyber extortion and equipment breakdown usually need the endorsements shown above.</p></div></div>
+    </div>
+    <div class="cvg-faq-item" data-aos="fade-up" data-aos-delay="240">
+      <button class="cvg-faq-q" aria-expanded="false">
+        <span>Can I add endorsements after my policy is already bound?</span>
+        <span class="cvg-faq-icon"><i class="fa-solid fa-plus cvg-icon-plus"></i><i class="fa-solid fa-minus cvg-icon-minus"></i></span>
+      </button>
+      <div class="cvg-faq-a"><div class="cvg-faq-a-inner"><p>Yes, endorsements can be added mid-term with no rewrite fee. Your premium is prorated for the remainder of the policy period.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER (same as home) ============ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="brand-logo">
+    <img src="Assest/stackly-emerald-black.webp" alt="STACKLY" class="brand-logo-img">
+</a>
+      <p>Plain-terms commercial insurance for businesses, since 2009. Licensed in all 50 states.</p>
+      <div class="footer-newsletter">
+  <input
+  type="email"
+  placeholder="Your email for risk &amp; coverage tips"
+>
+
+  <button aria-label="Subscribe">
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</div>
+    </div>
+
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <a href="index.html">Home</a>
+      <a href="coverage.html">Coverage </a>
+      <a href="industries.html">Industries</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="404.html">About Us</a>
+      <a href="404.html">How It Works</a>
+      <a href="404.html">Plans &amp; Pricing</a>
+      <a href="404.html">FAQs</a>
+      <a href="404.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="404.html">Privacy Policy</a>
+      <a href="404.html">Terms of Service</a>
+      <a href="404.html">Claims Disclosure</a>
+      <a href="404.html">Licensing</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Stackly Business Insurance. All rights reserved.</span>
+    <div class="footer-socials">
+      <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

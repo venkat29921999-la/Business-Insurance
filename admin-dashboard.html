@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | Stackly</title>
+<meta name="description" content="Stackly advisor dashboard — clients, policies, analytics, claims and team, all in one place.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth-dashboard.css">
+</head>
+<body>
+
+<div class="dash-shell" data-role="admin">
+
+  <div class="dash-overlay" id="dashOverlay"></div>
+
+  <!-- ============ SIDEBAR — 8 nav links ============ -->
+  <aside class="dash-sidebar" id="dashSidebar">
+    <a href="index.html" class="brand-logo">
+    <img src="Assest/stackly-emerald-white.webp" alt="STACKLY" class="brand-logo-img">
+</a>
+
+    <nav class="dash-nav">
+      <span class="dash-nav-label">Overview</span>
+      <a href="#" class="dash-nav-link is-active" data-view="overview"><i class="fa-solid fa-gauge-high"></i> <span class="dash-nav-label-text">Dashboard</span></a>
+      <a href="#" class="dash-nav-link" data-view="inquiries"><i class="fa-solid fa-envelope"></i> <span class="dash-nav-label-text">Inquiries</span> <span class="badge-count" data-mail-unread-count>0</span></a>
+
+      <span class="dash-nav-label">Book of Business</span>
+      <a href="#" class="dash-nav-link" data-view="clients"><i class="fa-solid fa-users"></i> <span class="dash-nav-label-text">Clients</span></a>
+      <a href="#" class="dash-nav-link" data-view="policies"><i class="fa-solid fa-file-shield"></i> <span class="dash-nav-label-text">Policies</span></a>
+      <a href="#" class="dash-nav-link" data-view="claims"><i class="fa-solid fa-triangle-exclamation"></i> <span class="dash-nav-label-text">Claims</span></a>
+
+      <span class="dash-nav-label">Insights</span>
+      <a href="#" class="dash-nav-link" data-view="analytics"><i class="fa-solid fa-chart-line"></i> <span class="dash-nav-label-text">Analytics</span></a>
+      <a href="#" class="dash-nav-link" data-view="team"><i class="fa-solid fa-user-group"></i> <span class="dash-nav-label-text">Team</span></a>
+
+      <span class="dash-nav-label">Account</span>
+      <a href="#" class="dash-nav-link" data-view="settings"><i class="fa-solid fa-gear"></i> <span class="dash-nav-label-text">Settings</span></a>
+    </nav>
+
+    <div class="dash-sidebar-foot">
+      <button class="dash-logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</button>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div class="dash-main">
+
+    <header class="dash-topbar">
+      <button class="dash-hamburger" id="dashHamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+
+      <div class="dash-topbar-title">
+        <span data-topbar-title>Dashboard</span>
+        <span class="dash-topbar-sub">Welcome back, <span data-user-name>Advisor</span></span>
+      </div>
+
+      <div class="dash-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search clients, policies…">
+      </div>
+
+      <div class="dash-topbar-right">
+<button class="dash-bell" aria-label="Notifications" onclick="window.location.href='404.html'">
+    <i class="fa-regular fa-bell"></i>
+    <span class="bell-dot"></span>
+</button>
+        <div class="dash-user" onclick="window.location.href='404.html'" style="cursor: pointer;">
+    <div class="dash-user-avatar" data-user-initial>A</div>
+    <div class="dash-user-meta">
+        <strong data-user-name>Advisor</strong>
+        <span data-user-role>admin</span>
+    </div>
+</div>
+      </div>
+    </header>
+
+    <main class="dash-content">
+
+      <!-- VIEW 1 — OVERVIEW -->
+      <section class="dash-view is-active" data-view-id="overview">
+
+        <div class="dash-view-block">
+          <div class="dash-hero-banner">
+            <div class="dash-hero-glow" aria-hidden="true"></div>
+            <div class="dash-hero-content">
+              <span class="eyebrow eyebrow--light"><i class="fa-solid fa-sun"></i> Good to see you</span>
+              <h2>Here's how your book is doing today</h2>
+              <p>18 open inquiries, 3 renewals due this week, and your team is trending 8% ahead of last month.</p>
+            </div>
+            <div class="dash-hero-visual" aria-hidden="true"><i class="fa-solid fa-chart-simple"></i></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-stats-grid">
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="dash-stat-num" data-count="9612">0</div>
+            <div class="dash-stat-label">Active Clients <span class="dash-stat-trend"><i class="fa-solid fa-arrow-up"></i> 4.2%</span></div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <div class="dash-stat-num" data-count="2840000" data-prefix="$">0</div>
+            <div class="dash-stat-label">Premium Written <span class="dash-stat-trend"><i class="fa-solid fa-arrow-up"></i> 8.1%</span></div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon"><i class="fa-solid fa-inbox"></i></div>
+            <div class="dash-stat-num" data-count="18">0</div>
+            <div class="dash-stat-label">Open Inquiries <span class="dash-stat-trend is-down"><i class="fa-solid fa-arrow-down"></i> 2.4%</span></div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div class="dash-stat-num" data-count="7">0</div>
+            <div class="dash-stat-label">Pending Claims <span class="dash-stat-trend"><i class="fa-solid fa-arrow-up"></i> 1.1%</span></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-section-head"><h3>Quick Actions</h3></div>
+          <div class="dash-quick-actions">
+            <div class="dash-quick-action"><i class="fa-solid fa-file-circle-plus"></i><strong>New Quote</strong><span>Start a client application</span></div>
+            <div class="dash-quick-action"><i class="fa-solid fa-user-plus"></i><strong>Add Client</strong><span>Create a new record</span></div>
+            <div class="dash-quick-action"><i class="fa-solid fa-triangle-exclamation"></i><strong>Review Claim</strong><span>7 awaiting review</span></div>
+            <div class="dash-quick-action"><i class="fa-solid fa-file-export"></i><strong>Export Report</strong><span>Monthly book summary</span></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <div><h2>Recent Inquiries</h2><p>Latest client messages — jump into the full inbox for details.</p></div>
+              <a href="404.html"  data-view="inquiries">Open Inquiries <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="dash-doc-list" style="padding:8px 22px;">
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-envelope-open-text"></i></div><div class="dash-doc-info"><strong>Torres Build Group — General liability quote request</strong><span>9:41 AM · New Quote</span></div></div>
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-envelope-open-text"></i></div><div class="dash-doc-info"><strong>Dana Whitfield — Cyber policy coverage question</strong><span>8:15 AM · Existing Client</span></div></div>
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-envelope-open-text"></i></div><div class="dash-doc-info"><strong>Marcus Webb — Claim #CW-88213 status update</strong><span>Yesterday · Claim</span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 2 — INQUIRIES -->
+      <section class="dash-view" data-view-id="inquiries">
+
+        <div class="dash-view-block dash-mini-stats">
+          <div class="dash-mini-stat"><i class="fa-solid fa-stopwatch"></i><div><strong>&lt; 12 min</strong><span>Avg first reply</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-circle-check"></i><div><strong>42</strong><span>Resolved this week</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-face-smile"></i><div><strong>4.8/5</strong><span>Client satisfaction</span></div></div>
+        </div>
+
+        <div class="dash-view-block">
+          <section class="dash-panel">
+            <div class="dash-panel-head">
+              <div>
+                <h2>Client Inquiries</h2>
+                <p>New quote requests and messages — updates in real time.</p>
+              </div>
+              <div class="dash-tabs" id="dashMailTabs">
+                <button class="dash-tab is-active" data-filter="all">All</button>
+                <button class="dash-tab" data-filter="unread">Unread</button>
+                <button class="dash-tab" data-filter="flagged">Flagged</button>
+              </div>
+            </div>
+            <div class="dash-mail">
+              <div class="dash-mail-list" id="dashMailList"></div>
+              <div class="dash-mail-detail" id="dashMailDetail"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- VIEW 3 — CLIENTS -->
+      <section class="dash-view" data-view-id="clients">
+
+        <div class="dash-view-block">
+          <div class="dash-hero-banner">
+            <div class="dash-hero-glow" aria-hidden="true"></div>
+            <div class="dash-hero-content">
+              <span class="eyebrow eyebrow--light"><i class="fa-solid fa-users"></i> Client Directory</span>
+              <h2>9,612 businesses, one place to manage them</h2>
+              <p>Browse your book of business, check policy status, and jump straight into a client record.</p>
+            </div>
+            <div class="dash-hero-visual" aria-hidden="true"><i class="fa-solid fa-address-book"></i></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-mini-stats">
+          <div class="dash-mini-stat"><i class="fa-solid fa-users"></i><div><strong>9,612</strong><span>Total clients</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-user-plus"></i><div><strong>184</strong><span>New this month</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-rotate"></i><div><strong>94%</strong><span>Renewal rate</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-hourglass-half"></i><div><strong>3.4 yrs</strong><span>Avg tenure</span></div></div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-tabs dash-simple-tabs" data-target="#clientGrid">
+            <button class="dash-tab is-active" data-filter="all">All</button>
+            <button class="dash-tab" data-filter="active">Active</button>
+            <button class="dash-tab" data-filter="pending">Pending</button>
+            <button class="dash-tab" data-filter="review">In Review</button>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-people-grid" id="clientGrid">
+          <div class="dash-people-card" data-category="active"><span class="dash-status-pill is-active">Active</span><img class="dash-avatar-photo" src="Assest/dd1_under_100kb.webp" alt="Mara Torres"><h4>Mara Torres</h4><span class="role">Torres Build Group</span><div class="dash-people-meta"><div><strong>3</strong><span>Policies</span></div><div><strong>$18.2k</strong><span>Premium</span></div></div></div>
+          <div class="dash-people-card" data-category="active"><span class="dash-status-pill is-active">Active</span><img class="dash-avatar-photo" src="Assest/dd2_under_100kb.webp" alt="Dana Whitfield"><h4>Dana Whitfield</h4><span class="role">Whitfield & Co.</span><div class="dash-people-meta"><div><strong>2</strong><span>Policies</span></div><div><strong>$9.6k</strong><span>Premium</span></div></div></div>
+          <div class="dash-people-card" data-category="pending"><span class="dash-status-pill is-pending">Pending</span><img class="dash-avatar-photo" src="Assest/dd3_under_100kb.webp" alt="Elena Ruiz"><h4>Elena Ruiz</h4><span class="role">Ruiz Logistics LLC</span><div class="dash-people-meta"><div><strong>1</strong><span>Policies</span></div><div><strong>$4.1k</strong><span>Premium</span></div></div></div>
+          <div class="dash-people-card" data-category="active"><span class="dash-status-pill is-active">Active</span><img class="dash-avatar-photo" src="Assest/dd4_under_100kb.webp" alt="James Lin"><h4>James Lin</h4><span class="role">Lin & Partners</span><div class="dash-people-meta"><div><strong>4</strong><span>Policies</span></div><div><strong>$24.7k</strong><span>Premium</span></div></div></div>
+          <div class="dash-people-card" data-category="review"><span class="dash-status-pill is-review">In Review</span><img class="dash-avatar-photo" src="Assest/dd5_under_100kb.webp" alt="Priya Kapoor"><h4>Priya Kapoor</h4><span class="role">Kapoor Foods</span><div class="dash-people-meta"><div><strong>2</strong><span>Policies</span></div><div><strong>$11.3k</strong><span>Premium</span></div></div></div>
+          <div class="dash-people-card" data-category="active"><span class="dash-status-pill is-active">Active</span><img class="dash-avatar-photo" src="Assest/dd6_under_100kb.webp" alt="Marcus Webb"><h4>Marcus Webb</h4><span class="role">Webb Contracting</span><div class="dash-people-meta"><div><strong>3</strong><span>Policies</span></div><div><strong>$15.9k</strong><span>Premium</span></div></div></div>
+          <div class="dash-people-card" data-category="pending"><span class="dash-status-pill is-pending">Pending</span><img class="dash-avatar-photo" src="Assest/dd7_under_100kb.webp" alt="Sofia Ahn"><h4>Sofia Ahn</h4><span class="role">Ahn Design Studio</span><div class="dash-people-meta"><div><strong>1</strong><span>Policies</span></div><div><strong>$3.4k</strong><span>Premium</span></div></div></div>
+          <div class="dash-people-card" data-category="active"><span class="dash-status-pill is-active">Active</span><img class="dash-avatar-photo" src="Assest/dd8_under_100kb.webp" alt="Owen Clarke"><h4>Owen Clarke</h4><span class="role">Clarke Fleet Services</span><div class="dash-people-meta"><div><strong>5</strong><span>Policies</span></div><div><strong>$31.5k</strong><span>Premium</span></div></div></div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel" style="padding:24px 26px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+            <div><h3 style="font-size:1rem;font-weight:700;margin-bottom:4px;">Looking for someone specific?</h3><p style="font-size:.82rem;color:var(--text-soft);">Use the search bar above, or add a brand-new client to your book.</p></div>
+<button class="btn btn-primary" onclick="window.location.href='404.html'">
+    <span>Add Client</span>
+    <i class="fa-solid fa-user-plus"></i>
+</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 4 — POLICIES -->
+      <section class="dash-view" data-view-id="policies">
+
+        <div class="dash-view-block">
+          <div class="dash-hero-banner">
+            <div class="dash-hero-glow" aria-hidden="true"></div>
+            <div class="dash-hero-content">
+              <span class="eyebrow eyebrow--light"><i class="fa-solid fa-file-shield"></i> Policy Book</span>
+              <h2>Every policy, renewal, and premium in view</h2>
+              <p>Track what's bound, what's renewing soon, and where the book is concentrated.</p>
+            </div>
+            <div class="dash-hero-visual" aria-hidden="true"><i class="fa-solid fa-scale-balanced"></i></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-mini-stats">
+          <div class="dash-mini-stat"><i class="fa-solid fa-file-shield"></i><div><strong>11,204</strong><span>Active policies</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-sack-dollar"></i><div><strong>$2.84M</strong><span>Premium written</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-calculator"></i><div><strong>$1,940</strong><span>Avg premium</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-calendar-day"></i><div><strong>63</strong><span>Renewals due (30d)</span></div></div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-chart-card">
+            <div class="dash-section-head"><h3>Policy Mix by Coverage Type</h3><p>Share of active premium across your top lines.</p></div>
+            <div class="dash-donut-wrap">
+              <div class="dash-donut" data-pct="34"><div class="dash-donut-center"><strong>34%</strong><span>General Liability</span></div></div>
+              <div class="dash-donut-legend">
+                <div class="dash-legend-row"><span class="dash-legend-dot" style="background:var(--emerald);"></span> General Liability <span class="val">34%</span></div>
+                <div class="dash-legend-row"><span class="dash-legend-dot" style="background:#4F6B85;"></span> Commercial Property <span class="val">26%</span></div>
+                <div class="dash-legend-row"><span class="dash-legend-dot" style="background:#B79B4F;"></span> Cyber & Data Breach <span class="val">18%</span></div>
+                <div class="dash-legend-row"><span class="dash-legend-dot" style="background:var(--line);"></span> Workers' Comp & Other <span class="val">22%</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-policy-grid">
+          <div class="dash-policy-card">
+            <div class="dash-policy-top"><div class="dash-policy-icon"><i class="fa-solid fa-hard-hat"></i></div><div><h4>Torres Build Group</h4><span>General Liability</span></div></div>
+            <div class="dash-policy-figures"><div><strong>$18,200</strong><span>Premium</span></div><div><strong>$2M</strong><span>Limit</span></div></div>
+            <div class="dash-progress"><div class="dash-progress-fill" data-value="72"></div></div>
+            <div class="dash-progress-label"><span>Renews in 34 days</span><span>72%</span></div>
+          </div>
+          <div class="dash-policy-card">
+            <div class="dash-policy-top"><div class="dash-policy-icon"><i class="fa-solid fa-building"></i></div><div><h4>Whitfield & Co.</h4><span>Commercial Property</span></div></div>
+            <div class="dash-policy-figures"><div><strong>$9,640</strong><span>Premium</span></div><div><strong>$1.2M</strong><span>Limit</span></div></div>
+            <div class="dash-progress"><div class="dash-progress-fill" data-value="41"></div></div>
+            <div class="dash-progress-label"><span>Renews in 71 days</span><span>41%</span></div>
+          </div>
+          <div class="dash-policy-card">
+            <div class="dash-policy-top"><div class="dash-policy-icon"><i class="fa-solid fa-shield-halved"></i></div><div><h4>Kapoor Foods</h4><span>Cyber & Data Breach</span></div></div>
+            <div class="dash-policy-figures"><div><strong>$6,300</strong><span>Premium</span></div><div><strong>$1M</strong><span>Limit</span></div></div>
+            <div class="dash-progress"><div class="dash-progress-fill" data-value="90"></div></div>
+            <div class="dash-progress-label"><span>Renews in 9 days</span><span>90%</span></div>
+          </div>
+          <div class="dash-policy-card">
+            <div class="dash-policy-top"><div class="dash-policy-icon"><i class="fa-solid fa-truck"></i></div><div><h4>Clarke Fleet Services</h4><span>Commercial Auto</span></div></div>
+            <div class="dash-policy-figures"><div><strong>$22,900</strong><span>Premium</span></div><div><strong>$3M</strong><span>Limit</span></div></div>
+            <div class="dash-progress"><div class="dash-progress-fill" data-value="24"></div></div>
+            <div class="dash-progress-label"><span>Renews in 96 days</span><span>24%</span></div>
+          </div>
+          <div class="dash-policy-card">
+            <div class="dash-policy-top"><div class="dash-policy-icon"><i class="fa-solid fa-user-tie"></i></div><div><h4>Ruiz Logistics LLC</h4><span>Professional Liability</span></div></div>
+            <div class="dash-policy-figures"><div><strong>$4,100</strong><span>Premium</span></div><div><strong>$1M</strong><span>Limit</span></div></div>
+            <div class="dash-progress"><div class="dash-progress-fill" data-value="58"></div></div>
+            <div class="dash-progress-label"><span>Renews in 51 days</span><span>58%</span></div>
+          </div>
+          <div class="dash-policy-card">
+            <div class="dash-policy-top"><div class="dash-policy-icon"><i class="fa-solid fa-briefcase-medical"></i></div><div><h4>Webb Contracting</h4><span>Workers' Compensation</span></div></div>
+            <div class="dash-policy-figures"><div><strong>$15,900</strong><span>Premium</span></div><div><strong>$2M</strong><span>Limit</span></div></div>
+            <div class="dash-progress"><div class="dash-progress-fill" data-value="15"></div></div>
+            <div class="dash-progress-label"><span>Renews in 108 days</span><span>15%</span></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel" style="padding:24px 26px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+            <div><h3 style="font-size:1rem;font-weight:700;margin-bottom:4px;">3 policies renewing this week</h3><p style="font-size:.82rem;color:var(--text-soft);">Get ahead of renewals before they lapse.</p></div>
+<button class="btn btn-primary" onclick="window.location.href='404.html'">
+    <span>Review Renewals</span>
+    <i class="fa-solid fa-arrow-right"></i>
+</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 5 — CLAIMS -->
+      <section class="dash-view" data-view-id="claims">
+
+        <div class="dash-view-block">
+          <div class="dash-hero-banner">
+            <div class="dash-hero-glow" aria-hidden="true"></div>
+            <div class="dash-hero-content">
+              <span class="eyebrow eyebrow--light"><i class="fa-solid fa-triangle-exclamation"></i> Claims Desk</span>
+              <h2>7 claims need your attention</h2>
+              <p>Track every claim from first report to payout, across your whole book.</p>
+            </div>
+            <div class="dash-hero-visual" aria-hidden="true"><i class="fa-solid fa-file-waveform"></i></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-mini-stats">
+          <div class="dash-mini-stat"><i class="fa-solid fa-folder-open"></i><div><strong>7</strong><span>Open claims</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-stopwatch"></i><div><strong>9.2 days</strong><span>Avg resolution</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-circle-check"></i><div><strong>23</strong><span>Approved this month</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-circle-xmark"></i><div><strong>2</strong><span>Denied this month</span></div></div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-chart-card">
+            <div class="dash-section-head"><h3>Claims Filed by Type (last 6 months)</h3></div>
+            <div class="dash-bar-chart">
+              <div class="dash-bar-col" data-height="45"><div class="dash-bar"><span class="dash-bar-val">12</span></div><span class="dash-bar-label">Property</span></div>
+              <div class="dash-bar-col" data-height="70"><div class="dash-bar"><span class="dash-bar-val">19</span></div><span class="dash-bar-label">Auto</span></div>
+              <div class="dash-bar-col" data-height="30"><div class="dash-bar"><span class="dash-bar-val">8</span></div><span class="dash-bar-label">Liability</span></div>
+              <div class="dash-bar-col" data-height="20"><div class="dash-bar"><span class="dash-bar-val">5</span></div><span class="dash-bar-label">Cyber</span></div>
+              <div class="dash-bar-col" data-height="55"><div class="dash-bar"><span class="dash-bar-val">15</span></div><span class="dash-bar-label">Workers' Comp</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel">
+            <div class="dash-panel-head"><div><h2>Claim #CW-88213 — Featured</h2><p>Webb Contracting · Storm damage · Filed 12 days ago</p></div></div>
+            <div style="padding:24px 26px;">
+              <div class="dash-timeline">
+                <div class="dash-timeline-step is-done"><div class="dash-timeline-dot"><i class="fa-solid fa-check"></i></div><div class="dash-timeline-body"><h4>Claim reported</h4><span>Aug 1, 2026</span></div></div>
+                <div class="dash-timeline-step is-done"><div class="dash-timeline-dot"><i class="fa-solid fa-check"></i></div><div class="dash-timeline-body"><h4>Adjuster assigned</h4><span>Aug 2, 2026</span></div></div>
+                <div class="dash-timeline-step is-current"><div class="dash-timeline-dot"><i class="fa-solid fa-magnifying-glass"></i></div><div class="dash-timeline-body"><h4>Site inspection complete</h4><span>Aug 9, 2026</span><p>Estimate being finalized — client has requested a status update twice this week.</p></div></div>
+                <div class="dash-timeline-step"><div class="dash-timeline-dot"><i class="fa-solid fa-file-invoice-dollar"></i></div><div class="dash-timeline-body"><h4>Estimate &amp; payout</h4><span>Pending</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel">
+            <div class="dash-panel-head"><div><h2>Open Claims Queue</h2></div></div>
+            <div class="dash-doc-list" style="padding:8px 26px 20px;">
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-house-chimney-crack"></i></div><div class="dash-doc-info"><strong>Webb Contracting — Storm damage</strong><span>Filed 12 days ago</span></div><span class="dash-status-pill is-pending" style="margin:0;">In Review</span></div>
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-car-burst"></i></div><div class="dash-doc-info"><strong>Clarke Fleet Services — Vehicle collision</strong><span>Filed 5 days ago</span></div><span class="dash-status-pill is-review" style="margin:0;">Inspecting</span></div>
+              <div class="dash-doc-item"><div class="dash-doc-icon"><i class="fa-solid fa-laptop-medical"></i></div><div class="dash-doc-info"><strong>Kapoor Foods — Data breach</strong><span>Filed 2 days ago</span></div><span class="dash-status-pill is-pending" style="margin:0;">New</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 6 — ANALYTICS -->
+      <section class="dash-view" data-view-id="analytics">
+
+        <div class="dash-view-block">
+          <div class="dash-hero-banner">
+            <div class="dash-hero-glow" aria-hidden="true"></div>
+            <div class="dash-hero-content">
+              <span class="eyebrow eyebrow--light"><i class="fa-solid fa-chart-line"></i> Performance</span>
+              <h2>The book is trending up 8.1% this quarter</h2>
+              <p>Premium growth, channel mix, and your top-performing advisors at a glance.</p>
+            </div>
+            <div class="dash-hero-visual" aria-hidden="true"><i class="fa-solid fa-arrow-trend-up"></i></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-mini-stats">
+          <div class="dash-mini-stat"><i class="fa-solid fa-sack-dollar"></i><div><strong>$2.84M</strong><span>YTD premium</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-percent"></i><div><strong>94%</strong><span>Retention rate</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-bolt"></i><div><strong>1.9 days</strong><span>Avg quote-to-bind</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-star"></i><div><strong>4.8/5</strong><span>Client rating</span></div></div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-chart-card">
+            <div class="dash-section-head"><h3>Premium Written by Month</h3><p>Last 6 months, in thousands.</p></div>
+            <div class="dash-bar-chart">
+              <div class="dash-bar-col" data-height="40"><div class="dash-bar"><span class="dash-bar-val">$210k</span></div><span class="dash-bar-label">Mar</span></div>
+              <div class="dash-bar-col" data-height="55"><div class="dash-bar"><span class="dash-bar-val">$268k</span></div><span class="dash-bar-label">Apr</span></div>
+              <div class="dash-bar-col" data-height="48"><div class="dash-bar"><span class="dash-bar-val">$241k</span></div><span class="dash-bar-label">May</span></div>
+              <div class="dash-bar-col" data-height="72"><div class="dash-bar"><span class="dash-bar-val">$319k</span></div><span class="dash-bar-label">Jun</span></div>
+              <div class="dash-bar-col" data-height="65"><div class="dash-bar"><span class="dash-bar-val">$298k</span></div><span class="dash-bar-label">Jul</span></div>
+              <div class="dash-bar-col" data-height="88"><div class="dash-bar"><span class="dash-bar-val">$356k</span></div><span class="dash-bar-label">Aug</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-chart-card">
+            <div class="dash-section-head"><h3>Revenue by Channel</h3></div>
+            <div class="dash-donut-wrap">
+              <div class="dash-donut" data-pct="52"><div class="dash-donut-center"><strong>52%</strong><span>Referral</span></div></div>
+              <div class="dash-donut-legend">
+                <div class="dash-legend-row"><span class="dash-legend-dot" style="background:var(--emerald);"></span> Referral <span class="val">52%</span></div>
+                <div class="dash-legend-row"><span class="dash-legend-dot" style="background:#4F6B85;"></span> Direct / Website <span class="val">31%</span></div>
+                <div class="dash-legend-row"><span class="dash-legend-dot" style="background:var(--line);"></span> Partner Network <span class="val">17%</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel" style="padding:24px 26px;">
+            <div class="dash-section-head"><h3>Top Performing Advisors</h3></div>
+            <div class="dash-leaderboard">
+              <div class="dash-leader-row"><span class="dash-leader-rank">01</span><img class="dash-avatar-photo" src="Assest/dd5_under_100kb.webp" alt="Priya Kapoor"><div class="dash-leader-info"><strong>Priya Kapoor</strong><div class="dash-leader-bar"><div class="dash-leader-bar-fill" data-value="96"></div></div></div><span class="dash-leader-val">$412k</span></div>
+              <div class="dash-leader-row"><span class="dash-leader-rank">02</span><img class="dash-avatar-photo" src="Assest/dd4_under_100kb.webp" alt="James Lin"><div class="dash-leader-info"><strong>James Lin</strong><div class="dash-leader-bar"><div class="dash-leader-bar-fill" data-value="84"></div></div></div><span class="dash-leader-val">$361k</span></div>
+              <div class="dash-leader-row"><span class="dash-leader-rank">03</span><img class="dash-avatar-photo" src="Assest/dd3_under_100kb.webp" alt="Elena Ruiz"><div class="dash-leader-info"><strong>Elena Ruiz</strong><div class="dash-leader-bar"><div class="dash-leader-bar-fill" data-value="71"></div></div></div><span class="dash-leader-val">$298k</span></div>
+              <div class="dash-leader-row"><span class="dash-leader-rank">04</span><img class="dash-avatar-photo" src="Assest/dd6_under_100kb.webp" alt="Marcus Webb"><div class="dash-leader-info"><strong>Marcus Webb</strong><div class="dash-leader-bar"><div class="dash-leader-bar-fill" data-value="58"></div></div></div><span class="dash-leader-val">$241k</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 7 — TEAM -->
+      <section class="dash-view" data-view-id="team">
+
+        <div class="dash-view-block">
+          <div class="dash-hero-banner">
+            <div class="dash-hero-glow" aria-hidden="true"></div>
+            <div class="dash-hero-content">
+              <span class="eyebrow eyebrow--light"><i class="fa-solid fa-user-group"></i> Your Team</span>
+              <h2>210 licensed advisors, 6 in your pod</h2>
+              <p>See who's carrying what, and how your pod is trending this month.</p>
+            </div>
+            <div class="dash-hero-visual" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block dash-mini-stats">
+          <div class="dash-mini-stat"><i class="fa-solid fa-user-group"></i><div><strong>6</strong><span>Advisors in pod</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-stopwatch"></i><div><strong>&lt; 12 min</strong><span>Avg response time</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-face-smile"></i><div><strong>4.8/5</strong><span>Team CSAT</span></div></div>
+          <div class="dash-mini-stat"><i class="fa-solid fa-ticket"></i><div><strong>18</strong><span>Open tickets</span></div></div>
+        </div>
+
+        <div class="dash-view-block dash-people-grid">
+          <div class="dash-people-card"><span class="dash-status-pill is-active">Online</span><img class="dash-avatar-photo dash-avatar-photo--lg" src="Assest/dd5_under_100kb.webp" alt="Priya Kapoor"><h4>Priya Kapoor</h4><span class="role">Senior Advisor</span><div class="dash-people-meta"><div><strong>412</strong><span>Clients</span></div><div><strong>4.9</strong><span>Rating</span></div></div></div>
+          <div class="dash-people-card"><span class="dash-status-pill is-active">Online</span><img class="dash-avatar-photo dash-avatar-photo--lg" src="Assest/dd4_under_100kb.webp" alt="James Lin"><h4>James Lin</h4><span class="role">Advisor</span><div class="dash-people-meta"><div><strong>361</strong><span>Clients</span></div><div><strong>4.8</strong><span>Rating</span></div></div></div>
+          <div class="dash-people-card"><span class="dash-status-pill is-pending">Away</span><img class="dash-avatar-photo dash-avatar-photo--lg" src="Assest/dd3_under_100kb.webp" alt="Elena Ruiz"><h4>Elena Ruiz</h4><span class="role">Advisor</span><div class="dash-people-meta"><div><strong>298</strong><span>Clients</span></div><div><strong>4.7</strong><span>Rating</span></div></div></div>
+          <div class="dash-people-card"><span class="dash-status-pill is-active">Online</span><img class="dash-avatar-photo dash-avatar-photo--lg" src="Assest/dd6_under_100kb.webp" alt="Marcus Webb"><h4>Marcus Webb</h4><span class="role">Claims Specialist</span><div class="dash-people-meta"><div><strong>241</strong><span>Clients</span></div><div><strong>4.6</strong><span>Rating</span></div></div></div>
+          <div class="dash-people-card"><span class="dash-status-pill is-review">Offline</span><img class="dash-avatar-photo dash-avatar-photo--lg" src="Assest/dd7_under_100kb.webp" alt="Sofia Ahn"><h4>Sofia Ahn</h4><span class="role">Junior Advisor</span><div class="dash-people-meta"><div><strong>128</strong><span>Clients</span></div><div><strong>4.6</strong><span>Rating</span></div></div></div>
+          <div class="dash-people-card"><span class="dash-status-pill is-active">Online</span><img class="dash-avatar-photo dash-avatar-photo--lg" src="Assest/dd8_under_100kb.webp" alt="Owen Clarke"><h4>Owen Clarke</h4><span class="role">Underwriter</span><div class="dash-people-meta"><div><strong>—</strong><span>Clients</span></div><div><strong>4.9</strong><span>Rating</span></div></div></div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel" style="padding:24px 26px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+            <div><h3 style="font-size:1rem;font-weight:700;margin-bottom:4px;">Growing the pod?</h3><p style="font-size:.82rem;color:var(--text-soft);">Invite a licensed advisor to join your team.</p></div>
+<button class="btn btn-primary" onclick="window.location.href='404.html'">
+    <span>Invite Advisor</span>
+    <i class="fa-solid fa-user-plus"></i>
+</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 8 — SETTINGS -->
+      <section class="dash-view" data-view-id="settings">
+
+        <div class="dash-view-block">
+          <div class="dash-profile-banner">
+            <div class="dash-hero-glow" aria-hidden="true"></div>
+            <img class="dash-avatar-photo dash-avatar-photo--lg" style="position:relative;z-index:2;" src="Assest/dd5_under_100kb.webp" alt="Profile photo">
+            <div style="position:relative;z-index:2;">
+              <h2 style="font-family:var(--font-display);font-size:1.4rem;font-weight:700;" data-user-name>Advisor</h2>
+              <p style="color:rgba(243,239,227,0.68);font-size:.88rem;" data-user-email>advisor@stackly.example</p>
+              <span class="eyebrow eyebrow--light" style="margin-top:8px;"><i class="fa-solid fa-user-shield"></i> Admin Access</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel" style="padding:26px;">
+            <div class="dash-section-head"><h3>Personal Information</h3></div>
+            <form>
+              <div class="dash-settings-grid">
+                <div class="form-field"><label>Full name</label><input type="text" value="Priya Kapoor"></div>
+                <div class="form-field"><label>Email</label><input type="email" value="priya@stackly.example"></div>
+                <div class="form-field"><label>Phone</label><input type="tel" value="(555) 010-2231"></div>
+                <div class="form-field"><label>Office</label><input type="text" value="Chicago, IL"></div>
+              </div>
+<button type="button" class="btn btn-primary" style="margin-top:16px;" onclick="window.location.href='404.html'">
+    <span>Save Changes</span>
+    <i class="fa-solid fa-check"></i>
+</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel" style="padding:26px;">
+            <div class="dash-section-head"><h3>Notifications</h3></div>
+            <div class="dash-toggle-row"><div><strong>New inquiry alerts</strong><span>Email when a client sends a new message</span></div><label class="dash-switch"><input type="checkbox" checked><span class="dash-switch-track"></span></label></div>
+            <div class="dash-toggle-row"><div><strong>Claim status changes</strong><span>Notify me when a claim moves stages</span></div><label class="dash-switch"><input type="checkbox" checked><span class="dash-switch-track"></span></label></div>
+            <div class="dash-toggle-row"><div><strong>Weekly performance digest</strong><span>Summary every Monday morning</span></div><label class="dash-switch"><input type="checkbox"><span class="dash-switch-track"></span></label></div>
+            <div class="dash-toggle-row"><div><strong>SMS for urgent claims</strong><span>Text alerts for high-priority claims</span></div><label class="dash-switch"><input type="checkbox" checked><span class="dash-switch-track"></span></label></div>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-panel" style="padding:26px;">
+            <div class="dash-section-head"><h3>Security</h3></div>
+            <form>
+              <div class="dash-settings-grid">
+                <div class="form-field"><label>New password</label><input type="password" placeholder="••••••••"></div>
+                <div class="form-field"><label>Confirm password</label><input type="password" placeholder="••••••••"></div>
+              </div>
+              <div class="dash-toggle-row" style="margin-top:6px;"><div><strong>Two-factor authentication</strong><span>Require a code at login</span></div><label class="dash-switch"><input type="checkbox" checked><span class="dash-switch-track"></span></label></div>
+<button type="button" class="btn btn-primary" style="margin-top:12px;" onclick="window.location.href='404.html'">
+    <span>Update Security</span>
+    <i class="fa-solid fa-lock"></i>
+</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="dash-view-block">
+          <div class="dash-danger-zone">
+            <h4>Danger Zone</h4>
+            <p>Deactivating your account revokes dashboard access immediately. This can be undone by an org admin.</p>
+<button class="btn btn-danger" onclick="window.location.href='404.html'">
+    <span>Deactivate Account</span>
+</button>          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<script>
+  window.CW_MAIL_DATA = [
+    { id: 1, sender: 'Torres Build Group', subject: 'General liability quote request', preview: "We're a 40-person contracting outfit looking to bundle GL and fleet…", time: '9:41 AM', unread: true, flagged: true, tag: 'New Quote', body: "Hi team,\n\nWe're a 40-person commercial contracting outfit based in Austin. We currently carry general liability through another provider but our renewal is coming up and premiums jumped 22% with no claims on file.\n\nWe'd like a quote for General Liability bundled with Commercial Auto for our 6-vehicle fleet. Happy to hop on a call this week — mornings work best.\n\nThanks,\nMara Torres" },
+    { id: 2, sender: 'Dana Whitfield', subject: 'Cyber policy — coverage limits question', preview: 'Can you clarify what the $1M cyber limit actually covers in a breach…', time: '8:15 AM', unread: true, flagged: false, tag: 'Existing Client', body: "Hi,\n\nQuick question on our current cyber policy — does the $1M limit cover third-party notification costs if we have a data breach, or is that a separate rider?\n\nWe just onboarded a new payment processor and want to make sure we're covered before go-live next month.\n\nBest,\nDana" },
+    { id: 3, sender: 'Marcus Webb — Claims', subject: 'Claim #CW-88213 status update needed', preview: 'Client is asking for an update on their property damage claim from…', time: 'Yesterday', unread: true, flagged: false, tag: 'Claim', body: "The client at 220 Harbor Ave has asked twice this week for a status update on claim #CW-88213 (storm damage, filed 12 days ago). Adjuster notes show inspection complete but no estimate posted yet.\n\nCan you follow up with the adjuster and get back to the client today? They're getting anxious about repair timelines." },
+    { id: 4, sender: 'Priya Kapoor', subject: 'New industry vertical — food trucks', preview: 'Marketing wants to know if we can underwrite mobile food vendors for…', time: 'Yesterday', unread: false, flagged: true, tag: 'Internal', body: "Marketing is putting together a landing page for mobile food vendors and wants to confirm: can underwriting handle food truck GL + equipment coverage at scale, or is this still case-by-case?\n\nLet me know by Friday so I can brief the content team." },
+    { id: 5, sender: 'Elena Ruiz', subject: 'Workers comp — adding 3 new hires', preview: "We're growing fast and need to add 3 W-2 employees to our policy…", time: 'Mon', unread: false, flagged: false, tag: 'Endorsement', body: "Hi there,\n\nWe just hired 3 new full-time employees and need to update our workers' comp policy to reflect the new headcount. Payroll estimate attached separately — let me know what else you need from us.\n\nThanks!\nElena" },
+    { id: 6, sender: 'James Lin', subject: 'Renewal reminder — Q3 batch', preview: '14 accounts are up for renewal in the next 30 days, review attached…', time: 'Mon', unread: false, flagged: false, tag: 'Internal', body: "14 accounts are coming up for renewal in the next 30 days. I've flagged 3 with claims activity that may need re-underwriting before we send renewal terms. Full list is in the shared drive — can you review by Wednesday's team sync?" }
+  ];
+</script>
+<script src="auth.js"></script>
+</body>
+</html>

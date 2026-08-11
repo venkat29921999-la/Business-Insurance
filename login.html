@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In | Stackly</title>
+<meta name="description" content="Log in to your Stackly account to manage your policies or your advisor dashboard.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth-dashboard.css">
+</head>
+<body>
+
+<a href="index.html" class="auth-back-home"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+
+<div class="auth-page">
+
+  <!-- ============ LEFT — brand visual ============ -->
+  <div class="auth-visual">
+    <div class="auth-visual-glow" aria-hidden="true"></div>
+    <div class="auth-visual-grain" aria-hidden="true"></div>
+
+    <div class="auth-visual-top">
+      <a href="index.html" class="brand-logo">
+    <img src="Assest/stackly-emerald-white.webp" alt="STACKLY" class="brand-logo-img">
+</a>
+      <h1 class="auth-visual-headline">Plain-terms coverage.<br>One advisor. No queue.</h1>
+      <p class="auth-visual-sub">Log in to manage your policy, review claims, or — if you're on the team — jump into the advisor dashboard.</p>
+    </div>
+
+    <div class="auth-visual-bottom">
+      <div class="auth-orbit" aria-hidden="true">
+        <div class="auth-orbit-ring"></div>
+        <div class="auth-orbit-ring auth-orbit-ring--2"></div>
+        <div class="auth-orbit-path--1"><div class="auth-orbit-dot"><i class="fa-solid fa-shield-halved"></i></div></div>
+        <div class="auth-orbit-path--2"><div class="auth-orbit-dot"><i class="fa-solid fa-file-invoice-dollar"></i></div></div>
+        <div class="auth-orbit-path--3"><div class="auth-orbit-dot"><i class="fa-solid fa-comment-dots"></i></div></div>
+        <div class="auth-orbit-core"><i class="fa-solid fa-lock"></i></div>
+      </div>
+      <div class="auth-visual-stats">
+        <div class="auth-visual-stat"><strong>9,600+</strong><span>Businesses covered</span></div>
+        <div class="auth-visual-stat"><strong>50</strong><span>States licensed</span></div>
+        <div class="auth-visual-stat"><strong>17+</strong><span>Years underwriting</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ RIGHT — login form ============ -->
+  <div class="auth-panel">
+    <div class="auth-card">
+      <div class="auth-card-head">
+        <span class="eyebrow"><i class="fa-solid fa-right-to-bracket"></i> Welcome Back</span>
+        <h1>Log in to your account</h1>
+        <p>Choose your role and enter your details to continue.</p>
+      </div>
+
+      <form class="auth-form" id="loginForm" novalidate>
+
+        <div class="role-toggle">
+          <label>I am logging in as</label>
+          <div class="role-toggle-track" data-active="user">
+            <div class="role-toggle-thumb" aria-hidden="true"></div>
+            <label class="role-opt is-active">
+              <input type="radio" name="loginRole" value="user" checked>
+              <i class="fa-solid fa-user"></i><span>Client</span>
+            </label>
+            <label class="role-opt">
+              <input type="radio" name="loginRole" value="admin">
+              <i class="fa-solid fa-user-shield"></i><span>Advisor / Admin</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="auth-field" id="loginEmailField">
+          <label for="loginEmail">Email address</label>
+          <div class="auth-field-input-wrap">
+            <i class="fa-solid fa-envelope field-icon"></i>
+            <input type="email" id="loginEmail" placeholder="you@business.com" autocomplete="email" required>
+          </div>
+          <span class="auth-field-error"><i class="fa-solid fa-circle-exclamation"></i><span>Enter a valid email address</span></span>
+        </div>
+
+        <div class="auth-field has-toggle" id="loginPwdField">
+          <label for="loginPwd">Password</label>
+          <div class="auth-field-input-wrap">
+            <i class="fa-solid fa-lock field-icon"></i>
+            <input type="password" id="loginPwd" placeholder="Enter your password" autocomplete="current-password" required>
+            <button type="button" class="toggle-pwd" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+          </div>
+          <span class="auth-field-error"><i class="fa-solid fa-circle-exclamation"></i><span>Password must be at least 4 characters</span></span>
+        </div>
+
+        <div class="auth-remember-row">
+          <label><input type="checkbox"> Remember me</label>
+          <a href="404.html">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block auth-submit">
+          <span class="btn-label"><span class="btn-label-text">Log In</span><i class="fa-solid fa-arrow-right"></i></span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+
+        <p class="auth-switch">Don't have an account? <a href="signup.html">Sign up</a></p>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

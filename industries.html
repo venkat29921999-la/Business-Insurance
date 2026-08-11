@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industries We Cover | Stackly Business Insurance</title>
+<meta name="description" content="See how Stackly underwrites for retail, construction, technology, healthcare, manufacturing and hospitality — the risks, the coverage, and the advisors who know your trade.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">
+    <svg viewBox="0 0 100 100" class="pre-ring-svg">
+      <circle cx="40" cy="50" r="72"/>
+    </svg>
+    <a href="index.html" class="brand-logo">
+    <img src="Assest/stackly-emerald-white.webp" alt="STACKLY" class="brand-logo-img">
+</a>
+  </div>
+</div>
+
+<!-- ============ CURSOR GLOW ============ -->
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- ============ HEADER (same as home) ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="brand-logo">
+    <img src="Assest/stackly-emerald-black.webp" alt="STACKLY" class="brand-logo-img">
+</a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="coverage.html" class="nav-link">Coverage</a>
+      <a href="industries.html" class="nav-link is-active">Industries</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="login.html" class="login-btn login-btn-mobile"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+    </nav>
+
+    <div class="header-right">
+      <a href="login.html" class="login-btn">
+        <i class="fa-regular fa-circle-user"></i>
+        <span>Login</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 1. INDUSTRIES HERO — diagonal reveal + parallax chips ============ -->
+<section class="ind-hero" id="ind-hero">
+
+  <!-- Animated background image slider (same system as the homepage/coverage hero) -->
+  <div class="hero-bg-photo" data-hero-slider aria-hidden="true">
+    <div class="hero-bg-slide is-active">
+      <img src="Assest/bb29_under_100kb.webp" alt="" loading="eager">
+    </div>
+    <div class="hero-bg-slide">
+      <img src="Assest/bb14.webp" alt="" loading="lazy">
+    </div>
+    <div class="hero-bg-slide">
+      <img src="Assest/bb15.webp" alt="" loading="lazy">
+    </div>
+    <div class="hero-bg-slide">
+      <img src="Assest/bb18.webp" alt="" loading="lazy">
+    </div>
+    <div class="hero-bg-slide">
+      <img src="Assest/bb19.webp" alt="" loading="lazy">
+    </div>
+
+    <div class="hero-scene-indicator">
+      <span class="hero-scene-label">Industries in motion</span>
+      <div class="hero-scene-dots" role="tablist" aria-label="Industries hero background scenes">
+        <button class="hero-scene-dot is-active" type="button" aria-label="Show scene 1" aria-selected="true"></button>
+        <button class="hero-scene-dot" type="button" aria-label="Show scene 2" aria-selected="false"></button>
+        <button class="hero-scene-dot" type="button" aria-label="Show scene 3" aria-selected="false"></button>
+        <button class="hero-scene-dot" type="button" aria-label="Show scene 4" aria-selected="false"></button>
+        <button class="hero-scene-dot" type="button" aria-label="Show scene 5" aria-selected="false"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="ind-hero-scrim"></div>
+
+  <div class="ind-hero-chips" id="indHeroChips" aria-hidden="true">
+    <span class="ind-chip" data-depth="0.5"><i class="fa-solid fa-store"></i> Retail</span>
+    <span class="ind-chip" data-depth="0.9"><i class="fa-solid fa-helmet-safety"></i> Construction</span>
+    <span class="ind-chip" data-depth="0.65"><i class="fa-solid fa-laptop-code"></i> Technology</span>
+    <span class="ind-chip" data-depth="1.05"><i class="fa-solid fa-stethoscope"></i> Healthcare</span>
+    <span class="ind-chip" data-depth="0.55"><i class="fa-solid fa-industry"></i> Manufacturing</span>
+    <span class="ind-chip" data-depth="0.85"><i class="fa-solid fa-utensils"></i> Hospitality</span>
+  </div>
+
+  <div class="ind-hero-inner">
+    <span class="eyebrow" data-aos="fade-up"><i class="fa-solid fa-industry"></i> Industries We Know</span>
+    <h1 class="reveal-text" data-aos="fade-up" data-aos-delay="80">Coverage that fits<br>how your trade works.</h1>
+    <p class="ind-hero-sub" data-aos="fade-up" data-aos-delay="160">
+      A restaurant and a software company don't carry the same risk — so they shouldn't carry the same policy.
+      Explore how we underwrite for six different trades below.
+    </p>
+    <div class="ind-hero-cta" data-aos="fade-up" data-aos-delay="240">
+      <a href="404.html" class="btn btn-primary"><span>Explore My Industry</span><i class="fa-solid fa-arrow-down"></i></a>
+      <a href="404.html" class="btn btn-ghost"><span>Take the 30-Second Quiz</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. EXPLORE BY INDUSTRY — tabs + morphing blob frame ============ -->
+<section class="section ind-explore" id="ind-explore">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-magnifying-glass"></i> Explore by Trade</span>
+    <h2 class="reveal-text">Pick your industry,<br>see what we typically write</h2>
+    <p>Every trade gets a different mix of coverage lines. Tap through to see how it changes.</p>
+  </div>
+
+  <div class="ind-explore-panel">
+    <div class="ind-tabs" id="indTabs">
+      <button class="ind-tab is-active" data-industry="retail"><i class="fa-solid fa-store"></i> Retail &amp; Ecommerce</button>
+      <button class="ind-tab" data-industry="construction"><i class="fa-solid fa-helmet-safety"></i> Construction</button>
+      <button class="ind-tab" data-industry="tech"><i class="fa-solid fa-laptop-code"></i> Technology &amp; SaaS</button>
+      <button class="ind-tab" data-industry="healthcare"><i class="fa-solid fa-stethoscope"></i> Healthcare</button>
+      <button class="ind-tab" data-industry="manufacturing"><i class="fa-solid fa-industry"></i> Manufacturing</button>
+      <button class="ind-tab" data-industry="hospitality"><i class="fa-solid fa-utensils"></i> Hospitality</button>
+    </div>
+
+    <div class="ind-explore-stage">
+      <div class="ind-blob" id="indBlob">
+        <img src="Assest/bb14.webp" alt="Retail storefront" id="indBlobImg">
+      </div>
+
+      <div class="ind-explore-content" id="indExploreContent">
+        <div class="ind-explore-item is-active" data-industry="retail">
+          <span class="ind-explore-eyebrow">Retail &amp; Ecommerce</span>
+          <h3>Product on shelves, product in transit, product returned.</h3>
+          <p>Slip-and-fall claims, damaged inventory and product liability all live under one roof — priced on your revenue and footprint, not a flat retail bracket.</p>
+          <ul class="ind-explore-tags">
+            <li><i class="fa-solid fa-check"></i> General Liability</li>
+            <li><i class="fa-solid fa-check"></i> Commercial Property</li>
+            <li><i class="fa-solid fa-check"></i> Product Liability</li>
+          </ul>
+        </div>
+        <div class="ind-explore-item" data-industry="construction">
+          <span class="ind-explore-eyebrow">Construction</span>
+          <h3>Every jobsite is a different risk profile.</h3>
+          <p>Tools in transit, subcontractor exposure and injury risk change site to site — coverage that flexes with the job, not a one-size policy.</p>
+          <ul class="ind-explore-tags">
+            <li><i class="fa-solid fa-check"></i> Workers' Compensation</li>
+            <li><i class="fa-solid fa-check"></i> Builder's Risk</li>
+            <li><i class="fa-solid fa-check"></i> Tools-in-Transit</li>
+          </ul>
+        </div>
+        <div class="ind-explore-item" data-industry="tech">
+          <span class="ind-explore-eyebrow">Technology &amp; SaaS</span>
+          <h3>Your product is a promise — and a target.</h3>
+          <p>Uptime commitments, client data and IP all carry exposure that general liability alone doesn't reach.</p>
+          <ul class="ind-explore-tags">
+            <li><i class="fa-solid fa-check"></i> Tech E&amp;O</li>
+            <li><i class="fa-solid fa-check"></i> Cyber &amp; Data Breach</li>
+            <li><i class="fa-solid fa-check"></i> Professional Liability</li>
+          </ul>
+        </div>
+        <div class="ind-explore-item" data-industry="healthcare">
+          <span class="ind-explore-eyebrow">Healthcare Practices</span>
+          <h3>Patient trust is the whole business.</h3>
+          <p>Malpractice exposure, HIPAA obligations and equipment-heavy offices need coverage built around clinical risk.</p>
+          <ul class="ind-explore-tags">
+            <li><i class="fa-solid fa-check"></i> Malpractice</li>
+            <li><i class="fa-solid fa-check"></i> HIPAA Breach Response</li>
+            <li><i class="fa-solid fa-check"></i> Commercial Property</li>
+          </ul>
+        </div>
+        <div class="ind-explore-item" data-industry="manufacturing">
+          <span class="ind-explore-eyebrow">Manufacturing</span>
+          <h3>One machine down can stop the whole line.</h3>
+          <p>Equipment breakdown and supply-chain interruption are as costly as any injury claim on a factory floor.</p>
+          <ul class="ind-explore-tags">
+            <li><i class="fa-solid fa-check"></i> Equipment Breakdown</li>
+            <li><i class="fa-solid fa-check"></i> Product Liability</li>
+            <li><i class="fa-solid fa-check"></i> Business Interruption</li>
+          </ul>
+        </div>
+        <div class="ind-explore-item" data-industry="hospitality">
+          <span class="ind-explore-eyebrow">Hospitality</span>
+          <h3>Guests, alcohol and food — three separate exposures.</h3>
+          <p>Liquor liability and food contamination sit outside standard general liability and need their own limits.</p>
+          <ul class="ind-explore-tags">
+            <li><i class="fa-solid fa-check"></i> Liquor Liability</li>
+            <li><i class="fa-solid fa-check"></i> Food Contamination</li>
+            <li><i class="fa-solid fa-check"></i> Guest Injury</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. RISK METRICS — animated bar chart ============ -->
+<section class="section ind-metrics" id="ind-metrics">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-chart-simple"></i> Claims Data</span>
+    <h2 class="reveal-text">Where claims<br>actually happen</h2>
+    <p>Share of policyholders in each industry who file at least one claim per year, based on our underwriting book.</p>
+  </div>
+
+  <div class="ind-bar-chart" id="indBarChart">
+    <div class="ind-bar-row" data-value="41">
+      <span class="ind-bar-label"><i class="fa-solid fa-helmet-safety"></i> Construction</span>
+      <div class="ind-bar-track"><div class="ind-bar-fill"></div></div>
+      <span class="ind-bar-num">0%</span>
+    </div>
+    <div class="ind-bar-row" data-value="33">
+      <span class="ind-bar-label"><i class="fa-solid fa-industry"></i> Manufacturing</span>
+      <div class="ind-bar-track"><div class="ind-bar-fill"></div></div>
+      <span class="ind-bar-num">0%</span>
+    </div>
+    <div class="ind-bar-row" data-value="27">
+      <span class="ind-bar-label"><i class="fa-solid fa-utensils"></i> Hospitality</span>
+      <div class="ind-bar-track"><div class="ind-bar-fill"></div></div>
+      <span class="ind-bar-num">0%</span>
+    </div>
+    <div class="ind-bar-row" data-value="22">
+      <span class="ind-bar-label"><i class="fa-solid fa-stethoscope"></i> Healthcare</span>
+      <div class="ind-bar-track"><div class="ind-bar-fill"></div></div>
+      <span class="ind-bar-num">0%</span>
+    </div>
+    <div class="ind-bar-row" data-value="15">
+      <span class="ind-bar-label"><i class="fa-solid fa-store"></i> Retail &amp; Ecommerce</span>
+      <div class="ind-bar-track"><div class="ind-bar-fill"></div></div>
+      <span class="ind-bar-num">0%</span>
+    </div>
+    <div class="ind-bar-row" data-value="9">
+      <span class="ind-bar-label"><i class="fa-solid fa-laptop-code"></i> Technology &amp; SaaS</span>
+      <div class="ind-bar-track"><div class="ind-bar-fill"></div></div>
+      <span class="ind-bar-num">0%</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. RISK SPOTLIGHT — corner-peel reveal cards ============ -->
+<section class="section ind-peel" id="ind-peel">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-triangle-exclamation"></i> Top Risk, By Trade</span>
+    <h2 class="reveal-text">The claim we see<br>most in your industry</h2>
+    <p>Peel back the corner to see the exposure — and the coverage line that answers it.</p>
+  </div>
+
+  <div class="ind-peel-grid">
+    <div class="ind-peel-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="ind-peel-front">
+        <img src="Assest/bb30.webp" alt="Retail store aisle">
+        <span class="ind-peel-tag">Retail</span>
+        <h4>Slip &amp; Fall Claims</h4>
+      </div>
+      <span class="ind-peel-corner"></span>
+      <div class="ind-peel-back">
+        <h4>Slip &amp; Fall Claims</h4>
+        <p>Wet floors and cluttered aisles drive the majority of retail liability claims. General Liability responds — with medical payments coverage handling smaller incidents without a formal claim.</p>
+      </div>
+    </div>
+
+    <div class="ind-peel-card" data-aos="fade-up" data-aos-delay="80">
+      <div class="ind-peel-front">
+        <img src="Assest/bb31.webp" alt="Construction crane on site">
+        <span class="ind-peel-tag">Construction</span>
+        <h4>On-Site Injuries</h4>
+      </div>
+      <span class="ind-peel-corner"></span>
+      <div class="ind-peel-back">
+        <h4>On-Site Injuries</h4>
+        <p>Falls and equipment injuries are the leading cause of jobsite claims. Workers' Compensation covers medical costs and lost wages, required in nearly every state.</p>
+      </div>
+    </div>
+
+    <div class="ind-peel-card" data-aos="fade-up" data-aos-delay="160">
+      <div class="ind-peel-front">
+        <img src="Assest/bb32.webp" alt="Software engineers at workstations">
+        <span class="ind-peel-tag">Technology</span>
+        <h4>Client Data Breach</h4>
+      </div>
+      <span class="ind-peel-corner"></span>
+      <div class="ind-peel-back">
+        <h4>Client Data Breach</h4>
+        <p>A single exposed database can trigger notification costs across every affected client. Cyber &amp; Data Breach coverage funds forensics, notification and credit monitoring.</p>
+      </div>
+    </div>
+
+    <div class="ind-peel-card" data-aos="fade-up" data-aos-delay="240">
+      <div class="ind-peel-front">
+        <img src="Assest/bb33.webp" alt="Medical office reception">
+        <span class="ind-peel-tag">Healthcare</span>
+        <h4>Malpractice Allegations</h4>
+      </div>
+      <span class="ind-peel-corner"></span>
+      <div class="ind-peel-back">
+        <h4>Malpractice Allegations</h4>
+        <p>Even a well-documented case can take months to resolve. Malpractice coverage funds legal defense and settlement while your practice keeps operating.</p>
+      </div>
+    </div>
+
+    <div class="ind-peel-card" data-aos="fade-up" data-aos-delay="320">
+      <div class="ind-peel-front">
+        <img src="Assest/bb18.webp" alt="Factory production line">
+        <span class="ind-peel-tag">Manufacturing</span>
+        <h4>Equipment Breakdown</h4>
+      </div>
+      <span class="ind-peel-corner"></span>
+      <div class="ind-peel-back">
+        <h4>Equipment Breakdown</h4>
+        <p>A failed motor or control panel can idle a whole line. Equipment Breakdown coverage pays for repair and the income lost while it's down.</p>
+      </div>
+    </div>
+
+    <div class="ind-peel-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="ind-peel-front">
+        <img src="Assest/bb34.webp" alt="Restaurant dining service">
+        <span class="ind-peel-tag">Hospitality</span>
+        <h4>Food Contamination</h4>
+      </div>
+      <span class="ind-peel-corner"></span>
+      <div class="ind-peel-back">
+        <h4>Food Contamination</h4>
+        <p>One bad batch can affect dozens of guests at once. Food contamination coverage handles medical claims and the cost of shutting down to resolve it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. CLIENT STORIES — vertical snap reel ============ -->
+<section class="section ind-stories" id="ind-stories">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-book-open"></i> Field Notes</span>
+    <h2 class="reveal-text">One claim,<br>four industries</h2>
+    <p>Scroll inside the panel — each story is a different trade, same fast response.</p>
+  </div>
+
+  <div class="ind-reel">
+    <div class="ind-reel-progress" aria-hidden="true"><span class="ind-reel-progress-fill" id="indReelFill"></span></div>
+
+    <div class="ind-reel-track" id="indReelTrack">
+      <article class="ind-reel-card">
+        <img src="Assest/bb35.webp" alt="Retail shop owner">
+        <div class="ind-reel-copy">
+          <span class="ind-reel-tag">Retail &amp; Ecommerce</span>
+          <h3>A burst pipe, a Saturday, and a full inventory room.</h3>
+          <p>Nair Boutique's stockroom flooded overnight. Photos went in through the app before opening; the claim was approved by Monday afternoon.</p>
+        </div>
+      </article>
+      <article class="ind-reel-card">
+        <img src="Assest/bb15.webp" alt="Construction site foreman">
+        <div class="ind-reel-copy">
+          <span class="ind-reel-tag">Construction</span>
+          <h3>A scaffolding fall, and a foreman who knew what to do.</h3>
+          <p>Torres Build Group's crew reported the injury on-site; an adjuster named Dana called back within the hour with next steps.</p>
+        </div>
+      </article>
+      <article class="ind-reel-card">
+        <img src="Assest/bb36.webp" alt="Software team responding to an incident">
+        <div class="ind-reel-copy">
+          <span class="ind-reel-tag">Technology &amp; SaaS</span>
+          <h3>A credential leak, contained before it reached clients.</h3>
+          <p>Lin Analytics caught unusual login activity at 2am. Our cyber response team was engaged before their own morning stand-up.</p>
+        </div>
+      </article>
+      <article class="ind-reel-card">
+        <img src="Assest/bb34.webp" alt="Restaurant kitchen staff">
+        <div class="ind-reel-copy">
+          <span class="ind-reel-tag">Hospitality</span>
+          <h3>A walk-in freezer failure, caught before service.</h3>
+          <p>A kitchen team flagged a temperature alarm before opening. Spoiled inventory and a rush replacement order were both covered same week.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="ind-reel-dots" id="indReelDots">
+      <button class="is-active" data-index="0" aria-label="Story 1"></button>
+      <button data-index="1" aria-label="Story 2"></button>
+      <button data-index="2" aria-label="Story 3"></button>
+      <button data-index="3" aria-label="Story 4"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. FIND YOUR FIT — interactive quiz wizard ============ -->
+<section class="section ind-quiz" id="ind-quiz">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-wand-magic-sparkles"></i> 30-Second Match</span>
+    <h2 class="reveal-text">Not sure where<br>to start?</h2>
+    <p>Answer three quick questions — we'll point you to a starting coverage mix.</p>
+  </div>
+
+  <div class="ind-quiz-panel" data-aos="zoom-in">
+    <div class="ind-quiz-progress"><span id="indQuizProgressFill"></span></div>
+
+    <div class="ind-quiz-track" id="indQuizTrack">
+      <div class="ind-quiz-step is-active" data-step="0">
+        <h3>What best describes your business?</h3>
+        <div class="ind-quiz-options">
+          <button data-q="business" data-value="retail"><i class="fa-solid fa-store"></i> Retail / Ecommerce</button>
+          <button data-q="business" data-value="construction"><i class="fa-solid fa-helmet-safety"></i> Construction / Trades</button>
+          <button data-q="business" data-value="tech"><i class="fa-solid fa-laptop-code"></i> Technology / SaaS</button>
+          <button data-q="business" data-value="other"><i class="fa-solid fa-briefcase"></i> Something else</button>
+        </div>
+      </div>
+
+      <div class="ind-quiz-step" data-step="1">
+        <h3>Do you handle customer or patient data regularly?</h3>
+        <div class="ind-quiz-options">
+          <button data-q="data" data-value="yes"><i class="fa-solid fa-database"></i> Yes, regularly</button>
+          <button data-q="data" data-value="no"><i class="fa-solid fa-circle-minus"></i> Rarely or never</button>
+        </div>
+      </div>
+
+      <div class="ind-quiz-step" data-step="2">
+        <h3>Where does your team spend most of the day?</h3>
+        <div class="ind-quiz-options">
+          <button data-q="setting" data-value="onsite"><i class="fa-solid fa-person-digging"></i> On a jobsite or floor</button>
+          <button data-q="setting" data-value="road"><i class="fa-solid fa-truck"></i> Driving between locations</button>
+          <button data-q="setting" data-value="office"><i class="fa-solid fa-desktop"></i> Office or remote</button>
+        </div>
+      </div>
+
+      <div class="ind-quiz-step" data-step="3">
+        <div class="ind-quiz-result">
+          <i class="fa-solid fa-circle-check"></i>
+          <span class="ind-quiz-result-label">Your recommended starting point</span>
+          <h3 id="indQuizResultTitle">General Business Coverage</h3>
+          <p id="indQuizResultText">We'll tailor a mix once we know a bit more about you.</p>
+          <div class="ind-quiz-result-actions">
+            <a href="404.html" class="btn btn-primary"><span>See Matching Coverage</span></a>
+<button class="btn btn-outline" id="indQuizRestart" type="button" onclick="window.location.href='404.html'">
+    <span>Start Over</span>
+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. SPECIALIST ADVISORS — skew-on-scroll gallery ============ -->
+<section class="section ind-advisors" id="ind-advisors">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-people-group"></i> Who You'll Work With</span>
+    <h2 class="reveal-text">Advisors who only<br>work your trade</h2>
+    <p>Drag or scroll sideways — each advisor focuses on two or three industries, not all of them.</p>
+  </div>
+
+  <div class="ind-advisor-scroller" id="indAdvisorScroller">
+    <div class="ind-advisor-card">
+      <img src="Assest/bb7.webp" alt="Advisor headshot">
+      <h4>Marcus Webb</h4>
+      <span>Retail &amp; Hospitality</span>
+    </div>
+    <div class="ind-advisor-card">
+      <img src="Assest/bb23.webp" alt="Advisor headshot">
+      <h4>Elena Torres</h4>
+      <span>Construction &amp; Trades</span>
+    </div>
+    <div class="ind-advisor-card">
+      <img src="Assest/bb9.webp" alt="Advisor headshot">
+      <h4>James Lin</h4>
+      <span>Technology &amp; SaaS</span>
+    </div>
+    <div class="ind-advisor-card">
+      <img src="Assest/bb22.webp" alt="Advisor headshot">
+      <h4>Priya Nair</h4>
+      <span>Healthcare Practices</span>
+    </div>
+    <div class="ind-advisor-card">
+      <img src="Assest/bb6.webp" alt="Advisor headshot">
+      <h4>Daniel Osei</h4>
+      <span>Manufacturing</span>
+    </div>
+    <div class="ind-advisor-card">
+      <img src="Assest/bb8.webp" alt="Advisor headshot">
+      <h4>Sofia Marin</h4>
+      <span>Hospitality &amp; Food Service</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. INDUSTRIES FAQ — mask reveal + fill bar ============ -->
+<section class="section ind-faq" id="ind-faq">
+  <div class="section-head" data-aos="fade-up">
+    <span class="eyebrow"><i class="fa-solid fa-circle-question"></i> Industry FAQ</span>
+    <h2 class="reveal-text">Common questions,<br>by trade</h2>
+  </div>
+
+  <div class="ind-faq-list">
+    <div class="ind-faq-item" data-aos="fade-up" data-aos-delay="0">
+      <button class="ind-faq-q" aria-expanded="true">
+        <span>My business touches two or three of these industries. Now what?</span>
+        <span class="ind-faq-bar"><span class="ind-faq-bar-fill"></span></span>
+      </button>
+      <div class="ind-faq-mask"><div class="ind-faq-a"><p>Very common — a restaurant that also caters events, or a contractor who also sells retail hardware. Your advisor blends coverage across both exposures under one account instead of forcing a single category.</p></div></div>
+    </div>
+    <div class="ind-faq-item" data-aos="fade-up" data-aos-delay="60">
+      <button class="ind-faq-q" aria-expanded="false">
+        <span>Does my premium change if I expand into a new industry?</span>
+        <span class="ind-faq-bar"><span class="ind-faq-bar-fill"></span></span>
+      </button>
+      <div class="ind-faq-mask"><div class="ind-faq-a"><p>Yes — and it should. A retailer adding a commercial kitchen takes on food-service risk that wasn't priced in originally. We'll re-underwrite the added exposure, not your whole policy.</p></div></div>
+    </div>
+    <div class="ind-faq-item" data-aos="fade-up" data-aos-delay="120">
+      <button class="ind-faq-q" aria-expanded="false">
+        <span>Are the claims percentages on this page specific to my state?</span>
+        <span class="ind-faq-bar"><span class="ind-faq-bar-fill"></span></span>
+      </button>
+      <div class="ind-faq-mask"><div class="ind-faq-a"><p>They're aggregated across our full underwriting book nationwide, so they're directional rather than state-specific. Your advisor can pull more localized figures during underwriting.</p></div></div>
+    </div>
+    <div class="ind-faq-item" data-aos="fade-up" data-aos-delay="180">
+      <button class="ind-faq-q" aria-expanded="false">
+        <span>Do specialist advisors cost more than a general one?</span>
+        <span class="ind-faq-bar"><span class="ind-faq-bar-fill"></span></span>
+      </button>
+      <div class="ind-faq-mask"><div class="ind-faq-a"><p>No — advisor assignment doesn't change your premium. It changes how quickly they can spot gaps specific to your trade during the underwriting conversation.</p></div></div>
+    </div>
+    <div class="ind-faq-item" data-aos="fade-up" data-aos-delay="240">
+      <button class="ind-faq-q" aria-expanded="false">
+        <span>My industry isn't listed here — can you still cover me?</span>
+        <span class="ind-faq-bar"><span class="ind-faq-bar-fill"></span></span>
+      </button>
+      <div class="ind-faq-mask"><div class="ind-faq-a"><p>These six are our most common trades, not an exhaustive list. Take the quiz above or reach out directly — most businesses map cleanly onto one of these coverage patterns.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER (same as home) ============ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="brand-logo">
+    <img src="Assest/stackly-emerald-black.webp" alt="STACKLY" class="brand-logo-img">
+</a>
+      <p>Plain-terms commercial insurance for businesses, since 2009. Licensed in all 50 states.</p>
+      <div class="footer-newsletter">
+  <input
+  type="email"
+  placeholder="Your email for risk &amp; coverage tips"
+>
+
+  <button aria-label="Subscribe">
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</div>
+    </div>
+
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <a href="index.html">Home</a>
+      <a href="coverage.html">Coverage</a>
+      <a href="industries.html">Industries</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="404.html">About Us</a>
+      <a href="404.html">How It Works</a>
+      <a href="404.html">Plans &amp; Pricing</a>
+      <a href="404.html">FAQs</a>
+      <a href="404.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="404.html">Privacy Policy</a>
+      <a href="404.html">Terms of Service</a>
+      <a href="404.html">Claims Disclosure</a>
+      <a href="404.html">Licensing</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Stackly Business Insurance. All rights reserved.</span>
+    <div class="footer-socials">
+      <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
