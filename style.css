@@ -2299,6 +2299,9 @@ section{ position:relative; }
   .cvg-stack-media{ min-height:220px; }
   .cvg-stack-content{ padding:32px 28px; }
   .cvg-chip-grid{ grid-template-columns:1fr; }
+  .cvg-subnav{ gap:8px; justify-content:flex-start; }
+  .cvg-subnav-item{ padding:10px; width:40px; height:40px; justify-content:center; flex-shrink:0; }
+  .cvg-subnav-item i{ font-size:.95rem; margin:0; }
   .cvg-subnav-item span{ display:none; }
 }
 
